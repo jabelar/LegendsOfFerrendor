@@ -5,6 +5,10 @@ view_wport[0] = 1080;
 globalvar debugMessage;
 debugMessage = "";
 
+// graphics constants
+globalvar TILE_SIZE;
+TILE_SIZE = 256;
+
 // state constants
 globalvar MAIN_MENU, WAIT_INPUT, MOVING, ENCOUNTER_SETUP, ENCOUNTER_PLAY;
 MAIN_MENU = 0;
@@ -26,6 +30,14 @@ STILL = 5;
 
 globalvar moveDirection;
 moveDirection = STILL;
+
+globalvar MOVES_LEFT, TWEENS_PER_MOVE;
+MOVES_LEFT = 3;
+TWEENS_PER_MOVE =16;
+
+globalvar tweenTargetX, tweenTargetY;
+tweenTargetX = 0;
+tweenTargetY = 0;
 
 // timing constants
 globalvar STEPS_PER_TURN;
