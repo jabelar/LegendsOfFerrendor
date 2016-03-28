@@ -1,2 +1,13 @@
 view_xport[0] = 0;
 view_wport[0] = 1080;
+
+// state constants
+globalvar MAIN_MENU, WAIT_INPUT, MOVING, ENCOUNTER_SETUP, ENCOUNTER_PLAY;
+MAIN_MENU = 0;
+WAIT_INPUT = 1;
+MOVING = 2;
+ENCOUNTER_SETUP = 3;
+ENCOUNTER_PLAY = 4;
+
+state = WAIT_INPUT;
+

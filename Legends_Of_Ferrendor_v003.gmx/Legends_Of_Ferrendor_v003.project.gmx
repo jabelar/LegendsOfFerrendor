@@ -16,6 +16,11 @@
   <scripts name="scripts">
     <script>scripts\scrMainLoop.gml</script>
     <script>scripts\scrInitialization.gml</script>
+    <script>scripts\scrMoving.gml</script>
+    <script>scripts\scrMainMenu.gml</script>
+    <script>scripts\scrWaitInput.gml</script>
+    <script>scripts\scrSetup.gml</script>
+    <script>scripts\scrPlay.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>
