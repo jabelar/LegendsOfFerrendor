@@ -3,7 +3,7 @@ tweenTargetY = objPlayer.y;
 
 if (keyboard_check(ord('A'))) then 
 {
-    if (not place_empty(objPlayer.x-TILE_SIZE, y))
+    if (place_meeting(objPlayer.x-TILE_SIZE, objPlayer.y, objInteractable))
     {
         scrCollision();
     }
@@ -16,7 +16,7 @@ if (keyboard_check(ord('A'))) then
 }
 else if (keyboard_check(ord('D'))) then
 {
-    if (not place_empty(objPlayer.x-TILE_SIZE, y))
+    if (place_meeting(objPlayer.x+TILE_SIZE, objPlayer.y, objInteractable))
     {
         scrCollision();
     }
@@ -29,7 +29,7 @@ else if (keyboard_check(ord('D'))) then
 }
 else if (keyboard_check(ord('W'))) then
 {
-    if (not place_empty(objPlayer.x-TILE_SIZE, y))
+    if (place_meeting(objPlayer.x, objPlayer.y-TILE_SIZE, objInteractable))
     {
         scrCollision();
     }
@@ -42,7 +42,7 @@ else if (keyboard_check(ord('W'))) then
 }
 else if (keyboard_check(ord('S'))) then
 {
-    if (not place_empty(objPlayer.x-TILE_SIZE, y))
+    if (place_meeting(objPlayer.x, objPlayer.y+TILE_SIZE, objInteractable))
     {
         scrCollision();
     }
@@ -59,4 +59,4 @@ else
     objPlayer.image_speed = 0;
 }
 
-debugMessage = string(state)+" "+string(tweenTargetX)+" "+string(tweenTargetY);
+debugMessage = string(state)+" "+string(tweenTargetX)+" "+string(tweenTargetY)+" "+string(place_meeting(objPlayer.x, objPlayer.y, objInteractable));
