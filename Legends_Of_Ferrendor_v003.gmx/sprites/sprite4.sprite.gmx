@@ -20,8 +20,8 @@
   <width>256</width>
   <height>256</height>
   <frames>
-    <frame index="0">images\sprPlayerLeft_0.png</frame>
-    <frame index="1">images\sprPlayerLeft_1.png</frame>
-    <frame index="2">images\sprPlayerLeft_2.png</frame>
+    <frame index="0">images\sprite4_0.png</frame>
+    <frame index="1">images\sprite4_1.png</frame>
+    <frame index="2">images\sprite4_2.png</frame>
   </frames>
 </sprite>

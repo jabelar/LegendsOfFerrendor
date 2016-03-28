@@ -10,6 +10,7 @@
     <sprite>sprites\sprPlayerDown</sprite>
     <sprite>sprites\sprPlayerRight</sprite>
     <sprite>sprites\sprPlayerLeft</sprite>
+    <sprite>sprites\sprObstacle</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
