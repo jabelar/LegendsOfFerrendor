@@ -9,4 +9,8 @@
     case ENCOUNTER_PLAY: scrPlay(); break;
  }
  
+turnTimer -= 1;
+if turnTimer < 0 then turnTimer = STEPS_PER_TURN;
+
+ 
 

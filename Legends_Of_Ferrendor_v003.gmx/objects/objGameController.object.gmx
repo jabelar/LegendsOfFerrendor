@@ -135,9 +135,10 @@ objPlayer.y = room_height - 256;
             <kind>1</kind>
             <string>draw_set_font(font0);
 draw_set_colour(c_aqua);
-draw_text(0, 100, "Time Remaining");
+draw_text(0, 100, "Time Remaining: "+string(turnTimer));
 draw_text(0, 200, string(objPlayer.x));
 draw_text(0, 300, string(objPlayer.y));
+draw_text(0, 400, debugMessage);
 </string>
           </argument>
         </arguments>
