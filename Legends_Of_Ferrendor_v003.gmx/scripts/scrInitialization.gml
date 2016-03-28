@@ -45,3 +45,11 @@ STEPS_PER_TURN = room_speed * 5;
 
 globalvar turnTimer;
 turnTimer = STEPS_PER_TURN;
+
+// player sprites
+globalvar spritesMoving;
+spritesMoving[UP] = sprPlayerUp;
+spritesMoving[DOWN] = sprPlayerDown;
+spritesMoving[RIGHT] = sprPlayerRight;
+spritesMoving[LEFT] = sprPlayerLeft;
+

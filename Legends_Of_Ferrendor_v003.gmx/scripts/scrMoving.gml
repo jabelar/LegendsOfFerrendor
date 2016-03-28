@@ -1,3 +1,6 @@
+objPlayer.image_speed = 0.25;
+objPlayer.sprite_index = spritesMoving[moveDirection];
+
 switch (moveDirection)
 {
     case LEFT:
