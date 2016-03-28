@@ -25,6 +25,7 @@
     <script>scripts\scrWaitInput.gml</script>
     <script>scripts\scrSetup.gml</script>
     <script>scripts\scrPlay.gml</script>
+    <script>scripts\scrCollision.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>
@@ -32,6 +33,7 @@
   <objects name="objects">
     <object>objects\objGameController</object>
     <object>objects\objPlayer</object>
+    <object>objects\objObstacle</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomBattlefield</room>
