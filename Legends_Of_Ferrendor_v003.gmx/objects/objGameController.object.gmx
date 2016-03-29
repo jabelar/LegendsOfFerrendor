@@ -69,6 +69,17 @@
             <kind>1</kind>
             <string>objPlayer.x = room_width / 2;
 objPlayer.y = room_height - 256;
+
+// place obstacles over tiles
+var tiles = tile_get_ids_at_depth(999999);
+show_debug_message("Number of tiles = "+string(array_length_1d(tiles)));
+for (var i = 0; i &lt; array_length_1d(tiles); i++;)
+{
+    instance_create(tile_get_x(tiles[i]), tile_get_y(tiles[i]), objObstacle);
+    show_debug_message("Placing obstacle at "+string(tile_get_x(tiles[i]))+", "+string(tile_get_y(tiles[i])));
+}
+
+
 </string>
           </argument>
         </arguments>

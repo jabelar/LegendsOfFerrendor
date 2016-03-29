@@ -6,7 +6,7 @@ if objPlayer.x < 0
    moveDirection = STILL;
    tweenTargetX = objPlayer.x;
 }
-if objPlayer.x + sprite_get_width(objPlayer.sprite_index) -1 >= room_width 
+if objPlayer.x + sprite_get_width(objPlayer.sprite_index) - 1 >= room_width 
 {
    objPlayer.x = room_width - TILE_SIZE;
    state = WAIT_INPUT;
@@ -20,7 +20,7 @@ if objPlayer.y < 0
    moveDirection = STILL;
    tweenTargetY = objPlayer.y;
 }   
-if objPlayer.y + sprite_get_height(objPlayer.sprite_index) -1 >= room_height 
+if objPlayer.y + sprite_get_height(objPlayer.sprite_index) - 1 >= room_height 
 {
    objPlayer.y = objPlayer.room_height - TILE_SIZE;
    state = WAIT_INPUT;
