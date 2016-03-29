@@ -14,8 +14,8 @@ if (keyboard_check(ord('A'))) then
     else
     {
         tweenTargetX = objPlayer.x - TILE_SIZE;
-    }
     moveDirection = LEFT;
+    }
 }
 else if (keyboard_check(ord('D'))) then
 {
@@ -26,8 +26,8 @@ else if (keyboard_check(ord('D'))) then
     else
     {
         tweenTargetX = objPlayer.x + TILE_SIZE;
-    }
     moveDirection = RIGHT;
+    }
 }
 else if (keyboard_check(ord('W'))) then
 {
@@ -38,8 +38,8 @@ else if (keyboard_check(ord('W'))) then
     else
     {
         tweenTargetY = objPlayer.y - TILE_SIZE;
-    }
     moveDirection = UP;
+    }
 }
 else if (keyboard_check(ord('S'))) then
 {
@@ -50,8 +50,8 @@ else if (keyboard_check(ord('S'))) then
     else
     {
         tweenTargetY = objPlayer.y + TILE_SIZE;
-    }
     moveDirection = DOWN;
+    }
 }
 else
 {
