@@ -7,6 +7,7 @@ if moveDirection != STILL
 
 if (keyboard_check(ord('A'))) then 
 {
+    moveDirection = LEFT;
     if (place_meeting(objPlayer.x - TILE_SIZE, objPlayer.y, objInteractable))
     {
         scrCollision();
@@ -14,11 +15,11 @@ if (keyboard_check(ord('A'))) then
     else
     {
         tweenTargetX = objPlayer.x - TILE_SIZE;
-    moveDirection = LEFT;
     }
 }
 else if (keyboard_check(ord('D'))) then
 {
+    moveDirection = RIGHT;
     if (place_meeting(objPlayer.x + TILE_SIZE, objPlayer.y, objInteractable))
     {
         scrCollision();
@@ -26,11 +27,11 @@ else if (keyboard_check(ord('D'))) then
     else
     {
         tweenTargetX = objPlayer.x + TILE_SIZE;
-    moveDirection = RIGHT;
     }
 }
 else if (keyboard_check(ord('W'))) then
 {
+    moveDirection = UP;
     if (place_meeting(objPlayer.x, objPlayer.y - TILE_SIZE, objInteractable))
     {
         scrCollision();
@@ -38,11 +39,11 @@ else if (keyboard_check(ord('W'))) then
     else
     {
         tweenTargetY = objPlayer.y - TILE_SIZE;
-    moveDirection = UP;
     }
 }
 else if (keyboard_check(ord('S'))) then
 {
+    moveDirection = DOWN;
     if (place_meeting(objPlayer.x, objPlayer.y + TILE_SIZE, objInteractable))
     {
         scrCollision();
@@ -50,7 +51,6 @@ else if (keyboard_check(ord('S'))) then
     else
     {
         tweenTargetY = objPlayer.y + TILE_SIZE;
-    moveDirection = DOWN;
     }
 }
 else
