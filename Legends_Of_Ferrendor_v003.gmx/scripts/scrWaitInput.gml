@@ -1,4 +1,8 @@
 objPlayer.image_speed = 0;
+if moveDirection != STILL
+{
+    objPlayer.sprite_index = spritesMoving[moveDirection];
+}
 
 
 if (keyboard_check(ord('A'))) then 
