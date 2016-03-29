@@ -29,6 +29,7 @@
     <script>scripts\scrRoomStart.gml</script>
     <script>scripts\scrKeepPlayerInView.gml</script>
     <script>scripts\scrKeepPlayerInRoom.gml</script>
+    <script>scripts\scrAttacking.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>

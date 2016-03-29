@@ -5,52 +5,80 @@ if moveDirection != STILL
 }
 
 
-if (keyboard_check(ord('A'))) then 
+if (keyboard_check(KEY_LEFT))  
 {
-    moveDirection = LEFT;
-    if (place_meeting(objPlayer.x - TILE_SIZE, objPlayer.y, objInteractable))
+    if (keyboard_check(KEY_LOOK))
     {
-        scrCollision();
+        moveDirection = LOOK_LEFT;
     }
     else
     {
-        tweenTargetX = objPlayer.x - TILE_SIZE;
+        moveDirection = LEFT;
+        if (place_meeting(objPlayer.x - TILE_SIZE, objPlayer.y, objInteractable))
+        {
+            scrCollision();
+        }
+        else
+        {
+            tweenTargetX = objPlayer.x - TILE_SIZE;
+        }
     }
 }
-else if (keyboard_check(ord('D'))) then
+else if (keyboard_check(KEY_RIGHT)) 
 {
-    moveDirection = RIGHT;
-    if (place_meeting(objPlayer.x + TILE_SIZE, objPlayer.y, objInteractable))
+    if (keyboard_check(KEY_LOOK))
     {
-        scrCollision();
+        moveDirection = LOOK_RIGHT;
     }
     else
     {
-        tweenTargetX = objPlayer.x + TILE_SIZE;
+        moveDirection = RIGHT;
+        if (place_meeting(objPlayer.x + TILE_SIZE, objPlayer.y, objInteractable))
+        {
+            scrCollision();
+        }
+        else
+        {
+            tweenTargetX = objPlayer.x + TILE_SIZE;
+        }
     }
 }
-else if (keyboard_check(ord('W'))) then
+else if (keyboard_check(KEY_UP)) 
 {
-    moveDirection = UP;
-    if (place_meeting(objPlayer.x, objPlayer.y - TILE_SIZE, objInteractable))
+    if (keyboard_check(KEY_LOOK))
     {
-        scrCollision();
+        moveDirection = LOOK_UP;
     }
     else
     {
-        tweenTargetY = objPlayer.y - TILE_SIZE;
+        moveDirection = UP;
+        if (place_meeting(objPlayer.x, objPlayer.y - TILE_SIZE, objInteractable))
+        {
+            scrCollision();
+        }
+        else
+        {
+            tweenTargetY = objPlayer.y - TILE_SIZE;
+        }
     }
 }
-else if (keyboard_check(ord('S'))) then
+else if (keyboard_check(KEY_DOWN)) 
 {
-    moveDirection = DOWN;
-    if (place_meeting(objPlayer.x, objPlayer.y + TILE_SIZE, objInteractable))
+    if (keyboard_check(KEY_LOOK))
     {
-        scrCollision();
+        moveDirection = LOOK_DOWN;
     }
     else
     {
-        tweenTargetY = objPlayer.y + TILE_SIZE;
+        moveDirection = DOWN;
+        if (place_meeting(objPlayer.x, objPlayer.y + TILE_SIZE, objInteractable))
+        {
+            scrCollision();
+        }
+        else
+        {
+            tweenTargetY = objPlayer.y + TILE_SIZE;
+        }
     }
 }
 else

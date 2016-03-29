@@ -14,11 +14,19 @@ globalvar MAIN_MENU, WAIT_INPUT, MOVING, ENCOUNTER_SETUP, ENCOUNTER_PLAY;
 MAIN_MENU = 0;
 WAIT_INPUT = 1;
 MOVING = 2;
-ENCOUNTER_SETUP = 3;
-ENCOUNTER_PLAY = 4;
+ATTACKING = 3;
 
 globalvar state;
 state = WAIT_INPUT;
+
+// input mapping
+globalvar KEY_LEFT, KEY_RIGHT, KEY_UP, KEY_DOWN, KEY_ATTACK, KEY_LOOK;
+KEY_LEFT = ord('A');
+KEY_RIGHT = ord('D');
+KEY_UP = ord('W');
+KEY_DOWN = ord('S');
+KEY_ATTACK = vk_control;
+KEY_LOOK = vk_shift;
 
 // movement constants
 globalvar UP, DOWN, LEFT, RIGHT, STILL;
