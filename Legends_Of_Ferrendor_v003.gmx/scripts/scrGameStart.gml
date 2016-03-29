@@ -22,11 +22,16 @@ state = WAIT_INPUT;
 
 // movement constants
 globalvar UP, DOWN, LEFT, RIGHT, STILL;
+globalvar LOOK_UP, LOOK_DOWN, LOOK_LEFT, LOOK_RIGHT;
 UP = 0;
 DOWN = 1;
 LEFT = 2
 RIGHT = 3;
 STILL = 5;
+LOOK_UP = 6;
+LOOK_DOWN = 7;
+LOOK_LEFT = 8;
+LOOK_RIGHT = 9;
 
 globalvar moveDirection;
 moveDirection = STILL;
@@ -52,4 +57,7 @@ spritesMoving[UP] = sprPlayerUp;
 spritesMoving[DOWN] = sprPlayerDown;
 spritesMoving[RIGHT] = sprPlayerRight;
 spritesMoving[LEFT] = sprPlayerLeft;
-
+spritesMoving[LOOK_UP] = sprPlayerUp;
+spritesMoving[LOOK_DOWN] = sprPlayerDown;
+spritesMoving[LOOK_RIGHT] = sprPlayerRight;
+spritesMoving[LOOK_LEFT] = sprPlayerLeft;
