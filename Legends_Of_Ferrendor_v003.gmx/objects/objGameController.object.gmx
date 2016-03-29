@@ -91,7 +91,7 @@ objPlayer.y = room_height - 256;
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>scrInitialization</script>
+            <script>scrGameStart</script>
           </argument>
           <argument>
             <kind>0</kind>

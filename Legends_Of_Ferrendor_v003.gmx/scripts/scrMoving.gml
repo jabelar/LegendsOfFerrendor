@@ -1,31 +1,54 @@
 objPlayer.image_speed = 0.25;
-objPlayer.sprite_index = spritesMoving[moveDirection];
-
+if moveDirection != STILL
+{
+    objPlayer.sprite_index = spritesMoving[moveDirection];
+}
+    
 switch (moveDirection)
 {
     case LEFT:
     {
         objPlayer.x -= TILE_SIZE / TWEENS_PER_MOVE;
+        if (objPlayer.x <= tweenTargetX)
+        {
+            state = WAIT_INPUT;
+            moveDirection = STILL;
+        }
         break;
     }
     case RIGHT:
     {
         objPlayer.x += TILE_SIZE / TWEENS_PER_MOVE;
+        if (objPlayer.x >= tweenTargetX)
+        {
+            state = WAIT_INPUT;
+            moveDirection = STILL;
+        }
         break;
     }
     case UP:
     {
         objPlayer.y -= TILE_SIZE / TWEENS_PER_MOVE;
+        if (objPlayer.y <= tweenTargetY)
+        {
+            state = WAIT_INPUT;
+            moveDirection = STILL;
+        }
         break;
     }
     case DOWN:
     {
         objPlayer.y += TILE_SIZE / TWEENS_PER_MOVE;
+        if (objPlayer.y >= tweenTargetY)
+        {
+            state = WAIT_INPUT;
+            moveDirection = STILL;
+        }
         break;
     }
     case STILL:
     {
-        // this case shouldn't happen
+        state = WAIT_INPUT;
         break;
     }
 }
@@ -33,30 +56,9 @@ switch (moveDirection)
 if (objPlayer.x == tweenTargetX and objPlayer.y == tweenTargetY)
 {
     state = WAIT_INPUT;
+    moveDirection = STILL;
 }
  
-// keep player from leaving room area
-if objPlayer.x < 0
-{
-   objPlayer.x = 0;
-   state = WAIT_INPUT;
-}
-if objPlayer.x >= room_width 
-{
-   objPlayer.x = room_width - TILE_SIZE;
-   state = WAIT_INPUT;
-}
-if objPlayer.y < 0 
-{
-   objPlayer.y = 0;
-   state = WAIT_INPUT;
-}   
-if objPlayer.y >= room_height 
-{
-   objPlayer.y = objPlayer.room_height - TILE_SIZE;
-   state = WAIT_INPUT;
-}
- 
-// update view
-view_xview[0] = objPlayer.x - 7 * TILE_SIZE; 
-view_yview[0] = objPlayer.y - 5 * TILE_SIZE; 
+scrKeepPlayerInRoom();
+
+scrKeepPlayerInView();
