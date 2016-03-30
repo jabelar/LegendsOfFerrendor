@@ -14,7 +14,8 @@ if (keyboard_check(KEY_LEFT))
     else
     {
         moveDirection = LEFT;
-        if (place_meeting(objPlayer.x - TILE_SIZE, objPlayer.y, objInteractable))
+        // if (place_meeting(objPlayer.x - TILE_SIZE, objPlayer.y, objInteractable))
+        if (tile_layer_find(999999, objPlayer.x - TILE_SIZE, objPlayer.y) != -1)
         {
             scrCollision();
         }
@@ -33,7 +34,8 @@ else if (keyboard_check(KEY_RIGHT))
     else
     {
         moveDirection = RIGHT;
-        if (place_meeting(objPlayer.x + TILE_SIZE, objPlayer.y, objInteractable))
+        // if (place_meeting(objPlayer.x + TILE_SIZE, objPlayer.y, objInteractable))
+        if (tile_layer_find(999999, objPlayer.x + TILE_SIZE, objPlayer.y) != -1)
         {
             scrCollision();
         }
@@ -52,7 +54,8 @@ else if (keyboard_check(KEY_UP))
     else
     {
         moveDirection = UP;
-        if (place_meeting(objPlayer.x, objPlayer.y - TILE_SIZE, objInteractable))
+        // if (place_meeting(objPlayer.x, objPlayer.y - TILE_SIZE, objInteractable))
+        if (tile_layer_find(999999, objPlayer.x, objPlayer.y - TILE_SIZE) != -1)
         {
             scrCollision();
         }
@@ -71,7 +74,8 @@ else if (keyboard_check(KEY_DOWN))
     else
     {
         moveDirection = DOWN;
-        if (place_meeting(objPlayer.x, objPlayer.y + TILE_SIZE, objInteractable))
+        // if (place_meeting(objPlayer.x, objPlayer.y + TILE_SIZE, objInteractable))
+        if (tile_layer_find(999999, objPlayer.x, objPlayer.y + TILE_SIZE) != -1)
         {
             scrCollision();
         }
