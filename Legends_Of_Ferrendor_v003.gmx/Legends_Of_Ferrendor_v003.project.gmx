@@ -35,6 +35,8 @@
     <script>scripts\scrAttackMelee.gml</script>
     <script>scripts\scrAttackRanged.gml</script>
     <script>scripts\scrAttackMagic.gml</script>
+    <script>scripts\scrUpdatePlayerDirection.gml</script>
+    <script>scripts\scrProcessTurnTimer.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>

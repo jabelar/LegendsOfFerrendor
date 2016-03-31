@@ -75,6 +75,7 @@ STEPS_PER_TURN = room_speed * 5;
 
 globalvar turnTimer;
 turnTimer = STEPS_PER_TURN;
+actionTimer = TWEENS_PER_MOVE;
 
 // player sprites
 globalvar spritesMoving;
