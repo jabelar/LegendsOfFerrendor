@@ -11,6 +11,9 @@
     <sprite>sprites\sprPlayerRight</sprite>
     <sprite>sprites\sprPlayerLeft</sprite>
     <sprite>sprites\sprObstacle</sprite>
+    <sprite>sprites\sprSword</sprite>
+    <sprite>sprites\sprArrow</sprite>
+    <sprite>sprites\sprite7</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
