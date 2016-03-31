@@ -5,7 +5,9 @@ switch (state)
    case MAIN_MENU: scrMainMenu(); break;
    case WAIT_INPUT: scrWaitInput(); break;
    case MOVING: scrMoving(); break;
-   case ATTACKING: scrAttacking(); break;
+   case ATTACK_MELEE: scrAttackMelee(); break;
+   case ATTACK_RANGED: scrAttackRanged(); break;
+   case ATTACK_MAGIC: scrAttackMagic(); break;
 } 
 
 debugMessage = string(state)+" "+string(tweenTargetX)+" "+string(tweenTargetY)+" "+string(moveDirection);

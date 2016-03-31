@@ -32,7 +32,9 @@
     <script>scripts\scrRoomStart.gml</script>
     <script>scripts\scrKeepPlayerInView.gml</script>
     <script>scripts\scrKeepPlayerInRoom.gml</script>
-    <script>scripts\scrAttacking.gml</script>
+    <script>scripts\scrAttackMelee.gml</script>
+    <script>scripts\scrAttackRanged.gml</script>
+    <script>scripts\scrAttackMagic.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>

@@ -3,29 +3,10 @@ state = WAIT_INPUT;
 tweenTargetX = objPlayer.x;
 tweenTargetY = objPlayer.y;
 
-switch (moveDirection)
-{
-    case LEFT:
-    {
-        moveDirection = LOOK_LEFT;
-        break;
-    }
-    case RIGHT:
-    {   
-        moveDirection = LOOK_RIGHT;
-        break;
-    }
-    case UP:
-    {
-        moveDirection = LOOK_UP;
-        break;
-    }
-    case DOWN:
-    {
-        moveDirection = LOOK_DOWN;
-        break;
-    }
- }      
+if (moveDirection == LEFT) then moveDirection = LOOK_LEFT;
+else if (moveDirection == RIGHT) then moveDirection = LOOK_RIGHT;
+else if (moveDirection == UP) then moveDirection = LOOK_UP;
+else if (moveDirection == DOWN) then moveDirection = LOOK_DOWN;
 
 show_debug_message("Collision");
 

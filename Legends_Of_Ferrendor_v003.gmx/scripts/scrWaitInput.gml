@@ -7,14 +7,20 @@ if moveDirection != STILL
 
 if (keyboard_check(KEY_LEFT))  
 {
-    if (keyboard_check(KEY_LOOK))
+    if (keyboard_check(KEY_MELEE))
     {
-        moveDirection = LOOK_LEFT;
+        moveDirection = MELEE_LEFT;
+        state = ATTACK_MELEE;
     }
-    else if (keyboard_check(KEY_ATTACK))
+    else if (keyboard_check(KEY_RANGED))
     {
-        moveDirection = LOOK_LEFT;
-        scrAttacking();
+        moveDirection = MELEE_LEFT;
+        state = ATTACK_RANGED;
+    }
+    else if (keyboard_check(KEY_MAGIC))
+    {
+        moveDirection = MELEE_LEFT;
+        sstate = ATTACK_MAGIC;
     }
     else
     {
@@ -32,14 +38,20 @@ if (keyboard_check(KEY_LEFT))
 }
 else if (keyboard_check(KEY_RIGHT)) 
 {
-    if (keyboard_check(KEY_LOOK))
+    if (keyboard_check(KEY_MELEE))
     {
-        moveDirection = LOOK_RIGHT;
+        moveDirection = MAGIC_RIGHT;
+        state = ATTACK_MELEE;
     }
-    else if (keyboard_check(KEY_ATTACK))
+    else if (keyboard_check(KEY_RANGED))
     {
-        moveDirection = LOOK_RIGHT;
-        scrAttacking();
+        moveDirection = MAGIC_RIGHT;
+        state = ATTACK_RANGED;
+    }
+    else if (keyboard_check(KEY_MAGIC))
+    {
+        moveDirection = MAGIC_RIGHT;
+        sstate = ATTACK_MAGIC;
     }
     else
     {
@@ -57,14 +69,20 @@ else if (keyboard_check(KEY_RIGHT))
 }
 else if (keyboard_check(KEY_UP)) 
 {
-    if (keyboard_check(KEY_LOOK))
+    if (keyboard_check(KEY_MELEE))
     {
-        moveDirection = LOOK_UP;
+        moveDirection = RANGED_UP;
+        state = ATTACK_MELEE;
     }
-    else if (keyboard_check(KEY_ATTACK))
+    else if (keyboard_check(KEY_RANGED))
     {
-        moveDirection = LOOK_UP;
-        scrAttacking();
+        moveDirection = RANGED_UP;
+        state = ATTACK_RANGED;
+    }
+    else if (keyboard_check(KEY_MAGIC))
+    {
+        moveDirection = RANGED_UP;
+        sstate = ATTACK_MAGIC;
     }
     else
     {
@@ -82,16 +100,22 @@ else if (keyboard_check(KEY_UP))
 }
 else if (keyboard_check(KEY_DOWN)) 
 {
-    if (keyboard_check(KEY_LOOK))
+    if (keyboard_check(KEY_MELEE))
     {
-        moveDirection = LOOK_DOWN;
+        moveDirection = MAGIC_DOWN;
+        state = ATTACK_MELEE;
     }
-    else if (keyboard_check(KEY_ATTACK))
+    else if (keyboard_check(KEY_RANGED))
     {
-        moveDirection = LOOK_DOWN;
-        scrAttacking();
+        moveDirection = MAGIC_DOWN;
+        state = ATTACK_RANGED;
     }
-    else
+    else if (keyboard_check(KEY_MAGIC))
+    {
+        moveDirection = MAGIC_DOWN;
+        sstate = ATTACK_MAGIC;
+    }
+  else
     {
         moveDirection = DOWN;
         // if (place_meeting(objPlayer.x, objPlayer.y + TILE_SIZE, objInteractable))
@@ -112,7 +136,22 @@ else
 turnTimer -= 1;
 if turnTimer < 0 
 {
-    state = MOVING;
     turnTimer = STEPS_PER_TURN;
+    if (moveDirection == LEFT || moveDirection == RIGHT || moveDirection == UP || moveDirection = DOWN)
+    {
+        state = MOVING;
+    }
+    else if (moveDirection == MELEE_LEFT || moveDirection == MELEE_RIGHT || moveDirection == MELEE_UP || moveDirection = MELEE_DOWN)
+    {
+        state = ATTACK_MELEE;
+    }
+    else if (moveDirection == RANGED_LEFT || moveDirection == RANGED_RIGHT || moveDirection == RANGED_UP || moveDirection = RANGED_DOWN)
+    {
+        state = ATTACK_RANGED;
+    }
+    else if (moveDirection == MAGIC_LEFT || moveDirection == MAGIC_RIGHT || moveDirection == MAGIC_UP || moveDirection = MAGIC_DOWN)
+    {
+        state = ATTACK_MAGIC;
+    }
 }
 
