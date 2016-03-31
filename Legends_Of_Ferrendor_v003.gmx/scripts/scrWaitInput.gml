@@ -11,6 +11,11 @@ if (keyboard_check(KEY_LEFT))
     {
         moveDirection = LOOK_LEFT;
     }
+    else if (keyboard_check(KEY_ATTACK))
+    {
+        moveDirection = LOOK_LEFT;
+        scrAttacking();
+    }
     else
     {
         moveDirection = LEFT;
@@ -30,6 +35,11 @@ else if (keyboard_check(KEY_RIGHT))
     if (keyboard_check(KEY_LOOK))
     {
         moveDirection = LOOK_RIGHT;
+    }
+    else if (keyboard_check(KEY_ATTACK))
+    {
+        moveDirection = LOOK_RIGHT;
+        scrAttacking();
     }
     else
     {
@@ -51,6 +61,11 @@ else if (keyboard_check(KEY_UP))
     {
         moveDirection = LOOK_UP;
     }
+    else if (keyboard_check(KEY_ATTACK))
+    {
+        moveDirection = LOOK_UP;
+        scrAttacking();
+    }
     else
     {
         moveDirection = UP;
@@ -70,6 +85,11 @@ else if (keyboard_check(KEY_DOWN))
     if (keyboard_check(KEY_LOOK))
     {
         moveDirection = LOOK_DOWN;
+    }
+    else if (keyboard_check(KEY_ATTACK))
+    {
+        moveDirection = LOOK_DOWN;
+        scrAttacking();
     }
     else
     {
