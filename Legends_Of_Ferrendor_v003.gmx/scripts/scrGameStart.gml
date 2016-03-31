@@ -25,8 +25,9 @@ KEY_LEFT = ord('A');
 KEY_RIGHT = ord('D');
 KEY_UP = ord('W');
 KEY_DOWN = ord('S');
-KEY_ATTACK = vk_control;
-KEY_LOOK = vk_shift;
+KEY_MELEE = ord('I');
+KEY_RANGED = ord('O');
+KEY_MAGIC = ord('P');
 
 // movement constants
 globalvar UP, DOWN, LEFT, RIGHT, STILL;
