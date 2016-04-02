@@ -1,8 +1,6 @@
 objPlayer.image_speed = 0.25;
-if moveDirection != STILL
-{
-    objPlayer.sprite_index = spritesMoving[moveDirection];
-}
+
+scrUpdatePlayerDirection();
     
 switch (moveDirection)
 {

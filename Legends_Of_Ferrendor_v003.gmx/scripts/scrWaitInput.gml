@@ -12,12 +12,12 @@ if (keyboard_check(KEY_LEFT))
     }
     else if (keyboard_check(KEY_RANGED))
     {
-        moveDirection = MELEE_LEFT;
+        moveDirection = RANGED_LEFT;
         state = ATTACK_RANGED;
     }
     else if (keyboard_check(KEY_MAGIC))
     {
-        moveDirection = MELEE_LEFT;
+        moveDirection = MAGIC_LEFT;
         sstate = ATTACK_MAGIC;
     }
     else
@@ -38,12 +38,12 @@ else if (keyboard_check(KEY_RIGHT))
 {
     if (keyboard_check(KEY_MELEE))
     {
-        moveDirection = MAGIC_RIGHT;
+        moveDirection = MELEE_RIGHT;
         state = ATTACK_MELEE;
     }
     else if (keyboard_check(KEY_RANGED))
     {
-        moveDirection = MAGIC_RIGHT;
+        moveDirection = RANGED_RIGHT;
         state = ATTACK_RANGED;
     }
     else if (keyboard_check(KEY_MAGIC))
@@ -69,7 +69,7 @@ else if (keyboard_check(KEY_UP))
 {
     if (keyboard_check(KEY_MELEE))
     {
-        moveDirection = RANGED_UP;
+        moveDirection = MELEE_UP;
         state = ATTACK_MELEE;
     }
     else if (keyboard_check(KEY_RANGED))
@@ -79,7 +79,7 @@ else if (keyboard_check(KEY_UP))
     }
     else if (keyboard_check(KEY_MAGIC))
     {
-        moveDirection = RANGED_UP;
+        moveDirection = MAGIC_UP;
         sstate = ATTACK_MAGIC;
     }
     else
@@ -100,12 +100,12 @@ else if (keyboard_check(KEY_DOWN))
 {
     if (keyboard_check(KEY_MELEE))
     {
-        moveDirection = MAGIC_DOWN;
+        moveDirection = MELEE_DOWN;
         state = ATTACK_MELEE;
     }
     else if (keyboard_check(KEY_RANGED))
     {
-        moveDirection = MAGIC_DOWN;
+        moveDirection = RANGED_DOWN;
         state = ATTACK_RANGED;
     }
     else if (keyboard_check(KEY_MAGIC))

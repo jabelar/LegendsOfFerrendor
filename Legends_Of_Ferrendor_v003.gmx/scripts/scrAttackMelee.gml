@@ -1,3 +1,5 @@
+scrUpdatePlayerDirection();
+
 actionTimer -=1;
 if actionTimer < 0
 {
