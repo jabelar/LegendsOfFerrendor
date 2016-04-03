@@ -18,6 +18,10 @@ ATTACK_MELEE = 3;
 ATTACK_RANGED = 4;
 ATTACK_MAGIC = 5;
 
+// Indicate whether an attack will start on next turn
+globalvar willAttack;
+willAttack = false;
+
 globalvar state;
 state = WAIT_INPUT;
 

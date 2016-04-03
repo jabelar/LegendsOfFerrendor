@@ -13,7 +13,7 @@
     <sprite>sprites\sprObstacle</sprite>
     <sprite>sprites\sprSword</sprite>
     <sprite>sprites\sprArrow</sprite>
-    <sprite>sprites\sprite7</sprite>
+    <sprite>sprites\sprMagic</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -46,6 +46,9 @@
     <object>objects\objPlayer</object>
     <object>objects\objObstacle</object>
     <object>objects\objInteractable</object>
+    <object>objects\objSword</object>
+    <object>objects\objRanged</object>
+    <object>objects\objMagic</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomBattlefield</room>

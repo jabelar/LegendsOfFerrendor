@@ -1,5 +1,3 @@
-scrUpdatePlayerDirection();
-
 actionTimer -=1;
 if actionTimer < 0
 {
@@ -7,3 +5,5 @@ if actionTimer < 0
     state = WAIT_INPUT;
     moveDirection = STILL;
 }
+
+scrKeepPlayerInView();
