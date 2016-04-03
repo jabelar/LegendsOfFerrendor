@@ -1,4 +1,6 @@
 // create weapon object on first step in attack state
+var objInstance;
+
 if willAttack
 {
     switch (moveDirection)
