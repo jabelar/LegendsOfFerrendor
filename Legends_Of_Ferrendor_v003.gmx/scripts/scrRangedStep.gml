@@ -1,11 +1,11 @@
-// var playerHit;
-// playerHit = instance_place(x, y, objPlayer)
-// if playerHit != -1 and playerHit != instance_find(objPlayer1, 1)
-// {
-//    scrDamagePlayerRanged(playerHit);
-//    show_debug_message("objRanged destroyed at "+string(x)+", "+string(y));
-//    instance_destroy();
-//}
+var playerHit;
+playerHit = instance_place(x, y, objPlayer)
+if playerHit != -1 and playerHit != attackingPlayer
+{
+    scrDamagePlayerRanged(playerHit);
+    show_debug_message("objRanged destroyed at "+string(x)+", "+string(y));
+    instance_destroy();
+}
 
 rangedTimer -= 1;
 if rangedTimer < 0
