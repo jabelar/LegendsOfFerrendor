@@ -63,7 +63,7 @@
     <object>objects\objGameController</object>
     <object>objects\objObstacle</object>
     <object>objects\objInteractable</object>
-    <object>objects\objSword</object>
+    <object>objects\objMelee</object>
     <object>objects\objRanged</object>
     <object>objects\objMagic</object>
     <objects name="players">

@@ -10,6 +10,19 @@ switch (state)
    case ATTACK_MAGIC: scrAttackMagic(); break;
 } 
 
+with objRanged
+{
+    scrRangedStep();
+}
+with objMagic
+{
+    scrMagicStep();
+}
+with objMelee
+{
+    scrMeleeStep();
+}
+
 debugMessage = string(state)+" "+string(tweenTargetX)+" "+string(tweenTargetY)+" "+string(moveDirection);
  
 
