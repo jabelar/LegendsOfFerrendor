@@ -1,4 +1,4 @@
 if moveDirection != STILL
 {
-    objPlayer.sprite_index = spritesMoving[moveDirection];
+    objPlayer1.sprite_index = spritesMoving[moveDirection];
 }

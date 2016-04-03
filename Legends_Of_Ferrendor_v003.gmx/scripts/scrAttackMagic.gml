@@ -7,28 +7,28 @@ if willAttack
     {
         case MAGIC_LEFT:
         {
-            objInstance = instance_create(objPlayer.x, objPlayer.y + TILE_SIZE / 2, objMagic);
+            objInstance = instance_create(objPlayer1.x, objPlayer1.y + TILE_SIZE / 2, objMagic);
             objInstance.direction = 180;
             objInstance.image_angle = 180;
             break;
         }
         case MAGIC_RIGHT:
         {
-            objInstance = instance_create(objPlayer.x + TILE_SIZE, objPlayer.y + TILE_SIZE / 2, objMagic);
+            objInstance = instance_create(objPlayer1.x + TILE_SIZE, objPlayer1.y + TILE_SIZE / 2, objMagic);
             objInstance.direction = 0;
             objInstance.image_angle = 0;
             break;
         }
         case MAGIC_UP:
         {
-            objInstance = instance_create(objPlayer.x + TILE_SIZE / 2, objPlayer.y , objMagic);
+            objInstance = instance_create(objPlayer1.x + TILE_SIZE / 2, objPlayer1.y , objMagic);
             objInstance.direction = 90;
             objInstance.image_angle = 90;
             break;
         }
         case MAGIC_DOWN:
         {
-            objInstance = instance_create(objPlayer.x + TILE_SIZE / 2, objPlayer.y + TILE_SIZE, objMagic);
+            objInstance = instance_create(objPlayer1.x + TILE_SIZE / 2, objPlayer1.y + TILE_SIZE, objMagic);
             objInstance.direction = 270;
             objInstance.image_angle = 270;
             break;

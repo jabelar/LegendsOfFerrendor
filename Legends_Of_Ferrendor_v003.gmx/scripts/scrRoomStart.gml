@@ -1,6 +1,3 @@
-objPlayer.x = room_width / 2;
-objPlayer.y = room_height - 256;
-
-tweenTargetX = objPlayer.x;
-tweenTargetY = objPlayer.y;
+objPlayer1.x = room_width / 2;
+objPlayer1.y = room_height - 256;
 

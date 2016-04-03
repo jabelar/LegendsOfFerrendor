@@ -7,28 +7,28 @@ if willAttack
     {
         case RANGED_LEFT:
         {
-            objInstance = instance_create(objPlayer.x, objPlayer.y + TILE_SIZE / 2, objRanged);
+            objInstance = instance_create(objPlayer1.x, objPlayer1.y + TILE_SIZE / 2, objRanged);
             objInstance.direction = 180;
             objInstance.image_angle = 180;
             break;
         }
         case RANGED_RIGHT:
         {
-            objInstance = instance_create(objPlayer.x + TILE_SIZE, objPlayer.y + TILE_SIZE / 2, objRanged);
+            objInstance = instance_create(objPlayer1.x + TILE_SIZE, objPlayer1.y + TILE_SIZE / 2, objRanged);
             objInstance.direction = 0;
             objInstance.image_angle = 0;
             break;
         }
         case RANGED_UP:
         {
-            objInstance = instance_create(objPlayer.x + TILE_SIZE / 2, objPlayer.y, objRanged);
+            objInstance = instance_create(objPlayer1.x + TILE_SIZE / 2, objPlayer1.y, objRanged);
             objInstance.direction = 90;
             objInstance.image_angle = 90;
             break;
         }
         case RANGED_DOWN:
         {
-            objInstance = instance_create(objPlayer.x + TILE_SIZE / 2, objPlayer.y + TILE_SIZE, objRanged);
+            objInstance = instance_create(objPlayer1.x + TILE_SIZE / 2, objPlayer1.y + TILE_SIZE, objRanged);
             objInstance.direction = 270;
             objInstance.image_angle = 270;
             break;

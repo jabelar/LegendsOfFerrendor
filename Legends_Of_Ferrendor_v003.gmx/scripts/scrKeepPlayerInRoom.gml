@@ -1,29 +1,29 @@
 // keep player from leaving room area
-if objPlayer.x < 0
+if objPlayer1.x < 0
 {
-   objPlayer.x = 0;
+   objPlayer1.x = 0;
    state = WAIT_INPUT;
    moveDirection = STILL;
-   tweenTargetX = objPlayer.x;
+   tweenTargetX = objPlayer1.x;
 }
-if objPlayer.x + sprite_get_width(objPlayer.sprite_index) - 1 >= room_width 
+if objPlayer1.x + sprite_get_width(objPlayer1.sprite_index) - 1 >= room_width 
 {
-   objPlayer.x = room_width - TILE_SIZE;
+   objPlayer1.x = room_width - TILE_SIZE;
    state = WAIT_INPUT;
    moveDirection = STILL;
-   tweenTargetX = objPlayer.x;
+   tweenTargetX = objPlayer1.x;
 }
-if objPlayer.y < 0 
+if objPlayer1.y < 0 
 {
-   objPlayer.y = 0;
+   objPlayer1.y = 0;
    state = WAIT_INPUT;
    moveDirection = STILL;
-   tweenTargetY = objPlayer.y;
+   tweenTargetY = objPlayer1.y;
 }   
-if objPlayer.y + sprite_get_height(objPlayer.sprite_index) - 1 >= room_height 
+if objPlayer1.y + sprite_get_height(objPlayer1.sprite_index) - 1 >= room_height 
 {
-   objPlayer.y = objPlayer.room_height - TILE_SIZE;
+   objPlayer1.y = objPlayer1.room_height - TILE_SIZE;
    state = WAIT_INPUT;
    moveDirection = STILL;
-   tweenTargetY = objPlayer.y;
+   tweenTargetY = objPlayer1.y;
 }

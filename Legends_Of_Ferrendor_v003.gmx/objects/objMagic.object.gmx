@@ -54,7 +54,15 @@ speed = 2 * range * TILE_SIZE / TWEENS_PER_MOVE;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>rangedTimer -= 1;
+            <string>var playerHit;
+playerHit = instance_place(x, y, objPlayer)
+if playerHit != -1 and playerHit != instance_find(objPlayer1, 1)
+{
+    scrDamagePlayerMagic(playerHit);
+    instance_destroy();
+}
+
+rangedTimer -= 1;
 if rangedTimer &lt; 0
 {
     instance_destroy();
