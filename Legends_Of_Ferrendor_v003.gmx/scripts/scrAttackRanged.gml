@@ -12,7 +12,7 @@ if willAttack
             {
                 direction = 180;
                 image_angle = 180;
-                scrRangedCreate(id);
+                scrRangedCreate(objPlayer1.id);
             }
             break;
         }
@@ -23,7 +23,7 @@ if willAttack
             {
                 direction = 0;
                 image_angle = 0;
-                scrRangedCreate(id);
+                scrRangedCreate(objPlayer1.id);
             }
            break;
         }
@@ -34,7 +34,7 @@ if willAttack
             {
                 direction = 90;
                 image_angle = 90;
-                scrRangedCreate(id);
+                scrRangedCreate(objPlayer1.id);
             }
             break;
         }
@@ -45,7 +45,7 @@ if willAttack
             {
                 direction = 270;
                 image_angle = 270;
-                scrRangedCreate(id);
+                scrRangedCreate(objPlayer1.id);
             }
             break;
         }
