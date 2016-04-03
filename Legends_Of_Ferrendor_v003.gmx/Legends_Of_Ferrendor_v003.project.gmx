@@ -23,20 +23,38 @@
   <scripts name="scripts">
     <script>scripts\scrMainLoop.gml</script>
     <script>scripts\scrGameStart.gml</script>
-    <script>scripts\scrMoving.gml</script>
-    <script>scripts\scrMainMenu.gml</script>
-    <script>scripts\scrWaitInput.gml</script>
-    <script>scripts\scrCollision.gml</script>
     <script>scripts\scrRoomStart.gml</script>
     <script>scripts\scrKeepPlayerInView.gml</script>
     <script>scripts\scrKeepPlayerInRoom.gml</script>
-    <script>scripts\scrAttackMelee.gml</script>
-    <script>scripts\scrAttackRanged.gml</script>
-    <script>scripts\scrAttackMagic.gml</script>
     <script>scripts\scrUpdatePlayerDirection.gml</script>
     <script>scripts\scrProcessTurnTimer.gml</script>
-    <script>scripts\scrDamagePlayerRanged.gml</script>
-    <script>scripts\scrDamagePlayerMagic.gml</script>
+    <scripts name="states">
+      <script>scripts\scrMoving.gml</script>
+      <script>scripts\scrMainMenu.gml</script>
+      <script>scripts\scrWaitInput.gml</script>
+      <script>scripts\scrAttackMelee.gml</script>
+      <script>scripts\scrAttackRanged.gml</script>
+      <script>scripts\scrAttackMagic.gml</script>
+    </scripts>
+    <script>scripts\scrCollision.gml</script>
+    <scripts name="attacks">
+      <scripts name="damage">
+        <script>scripts\scrDamagePlayerRanged.gml</script>
+        <script>scripts\scrDamagePlayerMagic.gml</script>
+        <script>scripts\scrDamageObstacleRanged.gml</script>
+        <script>scripts\scrDamageObstacleMagic.gml</script>
+      </scripts>
+      <scripts name="create">
+        <script>scripts\scrRangedCreate.gml</script>
+        <script>scripts\scrMagicCreate.gml</script>
+        <script>scripts\scrMeleeCreate.gml</script>
+      </scripts>
+      <scripts name="step">
+        <script>scripts\scrRangedStep.gml</script>
+        <script>scripts\scrMagicStep.gml</script>
+        <script>scripts\scrMeleeStep.gml</script>
+      </scripts>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>

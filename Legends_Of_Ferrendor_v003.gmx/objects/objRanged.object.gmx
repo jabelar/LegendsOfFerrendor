@@ -11,27 +11,41 @@
     <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>601</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string>show_debug_message("scrRanged created at "+string(x)+", "+string(y));
-
-range = 4;
-rangedTimer = TWEENS_PER_MOVE; 
-speed = 2 * range * TILE_SIZE / TWEENS_PER_MOVE;
-
-</string>
+            <kind>9</kind>
+            <script>scrRangedCreate</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
@@ -39,38 +53,41 @@ speed = 2 * range * TILE_SIZE / TWEENS_PER_MOVE;
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>601</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string>var playerHit;
-playerHit = instance_place(x, y, objPlayer)
-if playerHit != -1 and playerHit != instance_find(objPlayer1, 1)
-{
-    scrDamagePlayerRanged(playerHit);
-    instance_destroy();
-}
-
-
-rangedTimer -= 1;
-if rangedTimer &lt; 0
-{
-    instance_destroy();
-    show_debug_message("objRanged destroyed at "+string(x)+", "+string(y));
-}
-
-show_debug_message("objRanged at position "+string(x)+", "+string(y));
-</string>
+            <kind>9</kind>
+            <script>scrRangedStep</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
