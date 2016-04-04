@@ -3,7 +3,6 @@ objPlayer2.image_speed = 0;
 
 scrUpdatePlayerDirection();
 
-
 if (keyboard_check_pressed(KEY_LEFT))  
 {
     if (keyboard_check(KEY_MELEE))

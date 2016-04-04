@@ -104,3 +104,4 @@ spritesMoving[LOOK_DOWN] = sprPlayerDown;
 spritesMoving[LOOK_RIGHT] = sprPlayerRight;
 spritesMoving[LOOK_LEFT] = sprPlayerLeft;
 
+

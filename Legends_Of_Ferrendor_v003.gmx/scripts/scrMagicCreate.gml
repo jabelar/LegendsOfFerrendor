@@ -2,8 +2,8 @@
 attackingPlayer = argument0;
 
 range = 4;
-rangedTimer = TWEENS_PER_MOVE; 
-speed = 2 * range * TILE_SIZE / TWEENS_PER_MOVE;
+rangedTimer = 4 * range * TWEENS_PER_MOVE; 
+speed = 0.5 * TILE_SIZE / TWEENS_PER_MOVE;
 
 show_debug_message("scrMagic created at "+string(x)+", "+string(y)+" by instance "+string(attackingPlayer));
 
