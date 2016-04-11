@@ -75,7 +75,7 @@ tweenTargetY = 0;
 
 // timing constants
 globalvar STEPS_PER_TURN;
-STEPS_PER_TURN = room_speed * 5;
+STEPS_PER_TURN = room_speed * 5; // set the length in game steps of a turn to 5 seconds
 
 globalvar turnTimer;
 turnTimer = STEPS_PER_TURN;
@@ -104,4 +104,4 @@ spritesMoving[LOOK_DOWN] = sprPlayerDown;
 spritesMoving[LOOK_RIGHT] = sprPlayerRight;
 spritesMoving[LOOK_LEFT] = sprPlayerLeft;
 
-
+show_debug_overlay(true);

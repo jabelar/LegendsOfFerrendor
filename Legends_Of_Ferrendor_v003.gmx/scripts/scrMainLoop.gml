@@ -25,4 +25,4 @@ with objMelee
 
 debugMessage = string(state)+" "+string(tweenTargetX)+" "+string(tweenTargetY)+" "+string(moveDirection);
  
-
+// show_debug_message("turn time = "+string(turnTimer));
