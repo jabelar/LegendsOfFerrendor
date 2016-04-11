@@ -3,6 +3,7 @@ objPlayer2.image_speed = 0;
 
 scrUpdatePlayerDirection();
 
+// if direction key pressed check if attack key already pressed
 if (keyboard_check_pressed(KEY_LEFT))  
 {
     if (keyboard_check(KEY_MELEE))
@@ -127,12 +128,27 @@ else if (keyboard_check_pressed(KEY_DOWN))
         }
     }
 }
-else
+// else // check if want to attack in current direction
 {
+    if keyboard_check_pressed(KEY_MELEE)
+    {
+        lastAttackKey = KEY_MELEE;
+        willAttack = true;
+    }
+    else if keyboard_check_pressed(KEY_RANGED)
+    {
+        lastAttackKey = KEY_RANGED;
+        willAttack = true;
+    }
+    else if keyboard_check_pressed(KEY_MAGIC)
+    {
+        lastAttackKey = KEY_MAGIC;
+        willAttack = true;
+    }
 }
 
 scrProcessTurnTimer();
 
 scrKeepPlayerInView();
 
-
+// show_debug_message("moveDirection = "+string(moveDirection)+" lastAttackKey = "+string(lastAttackKey)+" willAttack = "+string(willAttack));

@@ -22,6 +22,12 @@ ATTACK_MAGIC = 5;
 globalvar willAttack;
 willAttack = false;
 
+// Detect most recent attack key pressed, using key codes
+// -1 = none, otherwise KEY_MELEE, KEY_MAGIC, KEY_RANGED)
+// it is cleared to -1 when attack happens at beginning of the turn
+globalvar lastAttackKey;
+lastAttackKey = -1;
+
 globalvar state;
 state = WAIT_INPUT;
 
@@ -104,4 +110,4 @@ spritesMoving[LOOK_DOWN] = sprPlayerDown;
 spritesMoving[LOOK_RIGHT] = sprPlayerRight;
 spritesMoving[LOOK_LEFT] = sprPlayerLeft;
 
-show_debug_overlay(true);
+// show_debug_overlay(true);

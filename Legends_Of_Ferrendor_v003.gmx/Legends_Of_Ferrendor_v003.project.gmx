@@ -28,6 +28,8 @@
     <script>scripts\scrKeepPlayerInRoom.gml</script>
     <script>scripts\scrUpdatePlayerDirection.gml</script>
     <script>scripts\scrProcessTurnTimer.gml</script>
+    <script>scripts\updateStateForAttackInNewDirection.gml</script>
+    <script>scripts\updateStateForAttackInExistingDirection.gml</script>
     <scripts name="states">
       <script>scripts\scrMoving.gml</script>
       <script>scripts\scrMainMenu.gml</script>
