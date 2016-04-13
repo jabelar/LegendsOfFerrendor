@@ -83,9 +83,33 @@ tweenTargetY = 0;
 globalvar STEPS_PER_TURN;
 STEPS_PER_TURN = room_speed * 5; // set the length in game steps of a turn to 5 seconds
 
-globalvar turnTimer;
+globalvar turnTimer, actionTimer;
 turnTimer = STEPS_PER_TURN;
 actionTimer = TWEENS_PER_MOVE;
+
+// player object instances (will be instantiated when room starts)
+globalvar playerInstance;
+playerInstance[0] = noone;
+playerInstance[1] = noone;
+playerInstance[2] = noone;
+playerInstance[3] = noone;
+
+// player health
+globalvar DEFAULT_HEALTH, playerHealth;
+DEFAULT_HEALTH = 20;
+playerHealth[0]= DEFAULT_HEALTH;
+playerHealth[1]= DEFAULT_HEALTH;
+playerHealth[2]= DEFAULT_HEALTH;
+playerHealth[3]= DEFAULT_HEALTH;
+
+globalvar DEFAULT_MELEE_DAMAGE, DEFAULT_RANGED_DAMAGE, DEFAULT_MAGIC_DAMAGE;
+DEFAULT_MELEE_DAMAGE = 5;
+DEFAULT_RANGED_DAMAGE = 2;
+DEFAULT_MAGIC_DAMAGE = 3; // note magic does more damage but has shorter range
+
+globalvar DEFAULT_RANGED_RANGE, DEFAULT_MAGIC_RANGE;
+DEFAULT_RANGED_RANGE = 7;
+DEFAULT_MAGIC_RANGE = 4;
 
 // player sprites
 globalvar spritesMoving;

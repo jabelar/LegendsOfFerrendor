@@ -1,4 +1,4 @@
-objPlayer1.image_speed = 0.25;
+playerInstance[0].image_speed = 0.25;
 
 scrUpdatePlayerDirection();
     
@@ -6,8 +6,8 @@ switch (moveDirection)
 {
     case LEFT:
     {
-        objPlayer1.x -= TILE_SIZE / TWEENS_PER_MOVE;
-        if (objPlayer1.x <= tweenTargetX)
+        playerInstance[0].x -= TILE_SIZE / TWEENS_PER_MOVE;
+        if (playerInstance[0].x <= tweenTargetX)
         {
             state = WAIT_INPUT;
             moveDirection = STILL;
@@ -16,8 +16,8 @@ switch (moveDirection)
     }
     case RIGHT:
     {
-        objPlayer1.x += TILE_SIZE / TWEENS_PER_MOVE;
-        if (objPlayer1.x >= tweenTargetX)
+        playerInstance[0].x += TILE_SIZE / TWEENS_PER_MOVE;
+        if (playerInstance[0].x >= tweenTargetX)
         {
             state = WAIT_INPUT;
             moveDirection = STILL;
@@ -26,8 +26,8 @@ switch (moveDirection)
     }
     case UP:
     {
-        objPlayer1.y -= TILE_SIZE / TWEENS_PER_MOVE;
-        if (objPlayer1.y <= tweenTargetY)
+        playerInstance[0].y -= TILE_SIZE / TWEENS_PER_MOVE;
+        if (playerInstance[0].y <= tweenTargetY)
         {
             state = WAIT_INPUT;
             moveDirection = STILL;
@@ -36,8 +36,8 @@ switch (moveDirection)
     }
     case DOWN:
     {
-        objPlayer1.y += TILE_SIZE / TWEENS_PER_MOVE;
-        if (objPlayer1.y >= tweenTargetY)
+        playerInstance[0].y += TILE_SIZE / TWEENS_PER_MOVE;
+        if (playerInstance[0].y >= tweenTargetY)
         {
             state = WAIT_INPUT;
             moveDirection = STILL;
@@ -51,7 +51,7 @@ switch (moveDirection)
     }
 }
 
-if (objPlayer1.x == tweenTargetX and objPlayer1.y == tweenTargetY)
+if (playerInstance[0].x == tweenTargetX and playerInstance[0].y == tweenTargetY)
 {
     state = WAIT_INPUT;
     moveDirection = STILL;

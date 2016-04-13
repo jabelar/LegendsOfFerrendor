@@ -45,6 +45,7 @@
         <script>scripts\scrDamagePlayerMagic.gml</script>
         <script>scripts\scrDamageObstacleRanged.gml</script>
         <script>scripts\scrDamageObstacleMagic.gml</script>
+        <script>scripts\scrPlayerDies.gml</script>
       </scripts>
       <scripts name="create">
         <script>scripts\scrRangedCreate.gml</script>
@@ -69,8 +70,6 @@
     <object>objects\objRanged</object>
     <object>objects\objMagic</object>
     <objects name="players">
-      <object>objects\objPlayer1</object>
-      <object>objects\objPlayer2</object>
       <object>objects\objPlayer</object>
     </objects>
   </objects>

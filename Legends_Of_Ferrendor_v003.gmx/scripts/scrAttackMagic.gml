@@ -7,45 +7,45 @@ if willAttack
     {
         case MAGIC_LEFT:
         {
-            objInstance = instance_create(objPlayer1.x, objPlayer1.y + TILE_SIZE / 2, objMagic);
+            objInstance = instance_create(playerInstance[0].x, playerInstance[0].y + TILE_SIZE / 2, objMagic);
             with objInstance
             {
                 direction = 180;
                 image_angle = 180;
-                scrMagicCreate(objPlayer1.id);
+                scrMagicCreate(playerInstance[0].id);
             }
             break;
         }
         case MAGIC_RIGHT:
         {
-            objInstance = instance_create(objPlayer1.x + TILE_SIZE, objPlayer1.y + TILE_SIZE / 2, objMagic);
+            objInstance = instance_create(playerInstance[0].x + TILE_SIZE, playerInstance[0].y + TILE_SIZE / 2, objMagic);
             with objInstance
             {
                 direction = 0;
                 image_angle = 0;
-                scrMagicCreate(objPlayer1.id);
+                scrMagicCreate(playerInstance[0].id);
             }
             break;
         }
         case MAGIC_UP:
         {
-            objInstance = instance_create(objPlayer1.x + TILE_SIZE / 2, objPlayer1.y , objMagic);
+            objInstance = instance_create(playerInstance[0].x + TILE_SIZE / 2, playerInstance[0].y , objMagic);
             with objInstance
             {
                 direction = 90;
                 image_angle = 90;
-                scrMagicCreate(objPlayer1.id);
+                scrMagicCreate(playerInstance[0].id);
             }
             break;
         }
         case MAGIC_DOWN:
         {
-            objInstance = instance_create(objPlayer1.x + TILE_SIZE / 2, objPlayer1.y + TILE_SIZE, objMagic);
+            objInstance = instance_create(playerInstance[0].x + TILE_SIZE / 2, playerInstance[0].y + TILE_SIZE, objMagic);
             with objInstance
             {
                 direction = 270;
                 image_angle = 270;
-                scrMagicCreate(objPlayer1.id);
+                scrMagicCreate(playerInstance[0].id);
             }
             break;
         }
