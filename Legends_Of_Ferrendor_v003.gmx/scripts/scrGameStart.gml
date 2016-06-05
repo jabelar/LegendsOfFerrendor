@@ -18,18 +18,20 @@ ATTACK_MELEE = 3;
 ATTACK_RANGED = 4;
 ATTACK_MAGIC = 5;
 
-// Indicate whether an attack will start on next turn
-globalvar willAttack;
-willAttack = false;
+globalvar state, MAX_NUM_PLAYERS, numPlayers, willAttack;
+MAX_NUM_PLAYERS = 4;
+numPlayers = MAX_NUM_PLAYERS; // later will change this based on LAN joined players
+for (i=0; i<MAX_NUM_PLAYERS; i++)
+{
+    state[i] = WAIT_INPUT;
+    willAttack[i] = false; // Indicates whether an attack will start on next turn
+}
 
 // Detect most recent attack key pressed, using key codes
 // -1 = none, otherwise KEY_MELEE, KEY_MAGIC, KEY_RANGED)
 // it is cleared to -1 when attack happens at beginning of the turn
 globalvar lastAttackKey;
 lastAttackKey = -1;
-
-globalvar state;
-state = WAIT_INPUT;
 
 // input mapping
 globalvar KEY_LEFT, KEY_RIGHT, KEY_UP, KEY_DOWN, KEY_MELEE, KEY_RANGED, KEY_MAGIC;
@@ -68,16 +70,17 @@ LOOK_DOWN = 19;
 LOOK_LEFT = 20;
 LOOK_RIGHT = 21;
 
-globalvar moveDirection;
-moveDirection = STILL;
+globalvar moveDirection, tweenTargetX, tweenTargetY;
+for (i=0; i<MAX_NUM_PLAYERS; i++)
+{
+    moveDirection[i] = STILL;
+    tweenTargetX[i] = 0;
+    tweenTargetY[i] = 0;
+}
 
 globalvar MOVES_LEFT, TWEENS_PER_MOVE;
 MOVES_LEFT = 3;
 TWEENS_PER_MOVE =16;
-
-globalvar tweenTargetX, tweenTargetY;
-tweenTargetX = 0;
-tweenTargetY = 0;
 
 // timing constants
 globalvar STEPS_PER_TURN;

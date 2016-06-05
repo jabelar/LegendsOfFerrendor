@@ -1,6 +1,7 @@
+// process local user
 if (keyboard_check_pressed(vk_escape)) then game_end();
  
-switch (state)
+switch (state[0])
 {
    case MAIN_MENU: scrMainMenu(); break;
    case WAIT_INPUT: scrWaitInput(); break;
@@ -23,6 +24,6 @@ with objMelee
     scrMeleeStep();
 }
 
-debugMessage = string(state)+" "+string(tweenTargetX)+" "+string(tweenTargetY)+" "+string(moveDirection);
+debugMessage = string(state[0])+" "+string(tweenTargetX[0])+" "+string(tweenTargetY[0])+" "+string(moveDirection[0]);
  
 // show_debug_message("turn time = "+string(turnTimer));
