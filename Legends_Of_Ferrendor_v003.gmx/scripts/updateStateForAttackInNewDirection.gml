@@ -1,20 +1,20 @@
-if (moveDirection == LEFT || moveDirection == RIGHT || moveDirection == UP || moveDirection = DOWN)
+if (moveDirection[currentPlayer] == LEFT || moveDirection[currentPlayer] == RIGHT || moveDirection[currentPlayer] == UP || moveDirection[currentPlayer] = DOWN)
 {
-    state = MOVING;
+    state[currentPlayer] = MOVING;
 }
-else if (moveDirection == MELEE_LEFT || moveDirection == MELEE_RIGHT || moveDirection == MELEE_UP || moveDirection = MELEE_DOWN)
+else if (moveDirection[currentPlayer] == MELEE_LEFT || moveDirection[currentPlayer] == MELEE_RIGHT || moveDirection[currentPlayer] == MELEE_UP || moveDirection[currentPlayer] = MELEE_DOWN)
 {
-    state = ATTACK_MELEE;
-    lastAttackKey = -1;
+    state[currentPlayer] = ATTACK_MELEE;
+    lastAttackKey[currentPlayer] = -1;
 }
-else if (moveDirection == RANGED_LEFT || moveDirection == RANGED_RIGHT || moveDirection == RANGED_UP || moveDirection = RANGED_DOWN)
+else if (moveDirection[currentPlayer] == RANGED_LEFT || moveDirection[currentPlayer] == RANGED_RIGHT || moveDirection[currentPlayer] == RANGED_UP || moveDirection[currentPlayer] = RANGED_DOWN)
 {
-    state = ATTACK_RANGED;
-    lastAttackKey = -1;
+    state[currentPlayer] = ATTACK_RANGED;
+    lastAttackKey[currentPlayer] = -1;
 }
-else if (moveDirection == MAGIC_LEFT || moveDirection == MAGIC_RIGHT || moveDirection == MAGIC_UP || moveDirection = MAGIC_DOWN)
+else if (moveDirection[currentPlayer] == MAGIC_LEFT || moveDirection[currentPlayer] == MAGIC_RIGHT || moveDirection[currentPlayer] == MAGIC_UP || moveDirection[currentPlayer] = MAGIC_DOWN)
 {
-    state = ATTACK_MAGIC;
-    lastAttackKey = -1;
+    state[currentPlayer] = ATTACK_MAGIC;
+    lastAttackKey[currentPlayer] = -1;
 }
 

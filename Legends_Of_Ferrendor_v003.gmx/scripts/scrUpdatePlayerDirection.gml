@@ -1,4 +1,4 @@
-if moveDirection != STILL
+if moveDirection[currentPlayer] != STILL
 {
-    playerInstance[0].sprite_index = spritesMoving[moveDirection];
+    playerInstance[currentPlayer].sprite_index = spritesMoving[moveDirection[currentPlayer]];
 }

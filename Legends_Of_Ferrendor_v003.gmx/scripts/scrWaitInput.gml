@@ -1,148 +1,151 @@
-playerInstance[0] = image_speed = 0;
+playerInstance[currentPlayer] = image_speed = 0;
 
 scrUpdatePlayerDirection();
 
-// if direction key pressed check if attack key already pressed
-if (keyboard_check_pressed(KEY_LEFT))  
+if (currentPlayer == 0)
 {
-    if (keyboard_check(KEY_MELEE))
+    // if direction key pressed check if attack key already pressed
+    if (keyboard_check_pressed(KEY_LEFT))  
     {
-        moveDirection = MELEE_LEFT;
-        willAttack = true;
-    }
-    else if (keyboard_check(KEY_RANGED))
-    {
-        moveDirection = RANGED_LEFT;
-        willAttack = true;
-    }
-    else if (keyboard_check(KEY_MAGIC))
-    {
-        moveDirection = MAGIC_LEFT;
-        willAttack = true;
-    }
-    else
-    {
-        moveDirection = LEFT;
-        // if (place_meeting(playerInstance[0].x - TILE_SIZE, playerInstance[0].y, objInteractable))
-        if (tile_layer_find(999999, playerInstance[0].x - TILE_SIZE, playerInstance[0].y) != -1)
+        if (keyboard_check(KEY_MELEE))
         {
-            scrCollision();
+            moveDirection[currentPlayer] = MELEE_LEFT;
+            willAttack[currentPlayer] = true;
+        }
+        else if (keyboard_check(KEY_RANGED))
+        {
+            moveDirection[currentPlayer] = RANGED_LEFT;
+            willAttack[currentPlayer] = true;
+        }
+        else if (keyboard_check(KEY_MAGIC))
+        {
+            moveDirection[currentPlayer] = MAGIC_LEFT;
+            willAttack[currentPlayer] = true;
         }
         else
         {
-            tweenTargetX = playerInstance[0].x - TILE_SIZE;
+            moveDirection[currentPlayer] = LEFT;
+            // if (place_meeting(playerInstance[0].x - TILE_SIZE, playerInstance[0].y, objInteractable))
+            if (tile_layer_find(999999, playerInstance[currentPlayer].x - TILE_SIZE, playerInstance[currentPlayer].y) != -1)
+            {
+                scrCollision();
+            }
+            else
+            {
+                tweenTargetX[currentPlayer] = playerInstance[currentPlayer].x - TILE_SIZE;
+            }
         }
     }
-}
-else if (keyboard_check_pressed(KEY_RIGHT)) 
-{
-    if (keyboard_check(KEY_MELEE))
+    else if (keyboard_check_pressed(KEY_RIGHT)) 
     {
-        moveDirection = MELEE_RIGHT;
-        willAttack = true;
-    }
-    else if (keyboard_check(KEY_RANGED))
-    {
-        moveDirection = RANGED_RIGHT;
-        willAttack = true;
-    }
-    else if (keyboard_check(KEY_MAGIC))
-    {
-        moveDirection = MAGIC_RIGHT;
-        willAttack = true;
-    }
-    else
-    {
-        moveDirection = RIGHT;
-        // if (place_meeting(playerInstance[0].x + TILE_SIZE, playerInstance[0].y, objInteractable))
-        if (tile_layer_find(999999, playerInstance[0].x + TILE_SIZE, playerInstance[0].y) != -1)
+        if (keyboard_check(KEY_MELEE))
         {
-            scrCollision();
+            moveDirection[currentPlayer] = MELEE_RIGHT;
+            willAttack[currentPlayer] = true;
+        }
+        else if (keyboard_check(KEY_RANGED))
+        {
+            moveDirection[currentPlayer] = RANGED_RIGHT;
+            willAttack[currentPlayer] = true;
+        }
+        else if (keyboard_check(KEY_MAGIC))
+        {
+            moveDirection[currentPlayer] = MAGIC_RIGHT;
+            willAttack[currentPlayer] = true;
         }
         else
         {
-            tweenTargetX = playerInstance[0].x + TILE_SIZE;
+            moveDirection = RIGHT;
+            // if (place_meeting(playerInstance[0].x + TILE_SIZE, playerInstance[0].y, objInteractable))
+            if (tile_layer_find(999999, playerInstance[currentPlayer].x + TILE_SIZE, playerInstance[currentPlayer].y) != -1)
+            {
+                scrCollision();
+            }
+            else
+            {
+                tweenTargetX[currentPlayer] = playerInstance[currentPlayer].x + TILE_SIZE;
+            }
         }
     }
-}
-else if (keyboard_check_pressed(KEY_UP)) 
-{
-    if (keyboard_check(KEY_MELEE))
+    else if (keyboard_check_pressed(KEY_UP)) 
     {
-        moveDirection = MELEE_UP;
-        willAttack = true;
-    }
-    else if (keyboard_check(KEY_RANGED))
-    {
-        moveDirection = RANGED_UP;
-        willAttack = true;
-    }
-    else if (keyboard_check(KEY_MAGIC))
-    {
-        moveDirection = MAGIC_UP;
-        willAttack = true;
-    }
-    else
-    {
-        moveDirection = UP;
-        // if (place_meeting(playerInstance[0].x, playerInstance[0].y - TILE_SIZE, objInteractable))
-        if (tile_layer_find(999999, playerInstance[0].x, playerInstance[0].y - TILE_SIZE) != -1)
+        if (keyboard_check(KEY_MELEE))
         {
-            scrCollision();
+            moveDirection[currentPlayer] = MELEE_UP;
+            willAttack[currentPlayer] = true;
+        }
+        else if (keyboard_check(KEY_RANGED))
+        {
+            moveDirection[currentPlayer] = RANGED_UP;
+            willAttack[currentPlayer] = true;
+        }
+        else if (keyboard_check(KEY_MAGIC))
+        {
+            moveDirection[currentPlayer] = MAGIC_UP;
+            willAttack[currentPlayer] = true;
         }
         else
         {
-            tweenTargetY = playerInstance[0].y - TILE_SIZE;
+            moveDirection[currentPlayer] = UP;
+            // if (place_meeting(playerInstance[0].x, playerInstance[0].y - TILE_SIZE, objInteractable))
+            if (tile_layer_find(999999, playerInstance[currentPlayer].x, playerInstance[currentPlayer].y - TILE_SIZE) != -1)
+            {
+                scrCollision();
+            }
+            else
+            {
+                tweenTargetY[currentPlayer] = playerInstance[currentPlayer].y - TILE_SIZE;
+            }
         }
     }
-}
-else if (keyboard_check_pressed(KEY_DOWN)) 
-{
-    if (keyboard_check(KEY_MELEE))
+    else if (keyboard_check_pressed(KEY_DOWN)) 
     {
-        moveDirection = MELEE_DOWN;
-        willAttack = true;
-    }
-    else if (keyboard_check(KEY_RANGED))
-    {
-        moveDirection = RANGED_DOWN;
-        willAttack = true;
-    }
-    else if (keyboard_check(KEY_MAGIC))
-    {
-        moveDirection = MAGIC_DOWN;
-        willAttack = true;
-    }
-  else
-    {
-        moveDirection = DOWN;
-        // if (place_meeting(playerInstance[0].x, playerInstance[0].y + TILE_SIZE, objInteractable))
-        if (tile_layer_find(999999, playerInstance[0].x, playerInstance[0].y + TILE_SIZE) != -1)
+        if (keyboard_check(KEY_MELEE))
         {
-            scrCollision();
+            moveDirection[currentPlayer] = MELEE_DOWN;
+            willAttack[currentPlayer] = true;
         }
-        else
+        else if (keyboard_check(KEY_RANGED))
         {
-            tweenTargetY = playerInstance[0].y + TILE_SIZE;
+            moveDirection[currentPlayer] = RANGED_DOWN;
+            willAttack[currentPlayer] = true;
+        }
+        else if (keyboard_check(KEY_MAGIC))
+        {
+            moveDirection[currentPlayer] = MAGIC_DOWN;
+            willAttack[currentPlayer] = true;
+        }
+      else
+        {
+            moveDirection[currentPlayer] = DOWN;
+            // if (place_meeting(playerInstance[0].x, playerInstance[0].y + TILE_SIZE, objInteractable))
+            if (tile_layer_find(999999, playerInstance[currentPlayer].x, playerInstance[currentPlayer].y + TILE_SIZE) != -1)
+            {
+                scrCollision();
+            }
+            else
+            {
+                tweenTargetY[currentPlayer] = playerInstance[currentPlayer].y + TILE_SIZE;
+            }
         }
     }
-}
-// else // check if want to attack in current direction
-{
-    if keyboard_check_pressed(KEY_MELEE)
+    // else // check if want to attack in current direction
     {
-        lastAttackKey = KEY_MELEE;
-        willAttack = true;
-    }
-    else if keyboard_check_pressed(KEY_RANGED)
-    {
-        lastAttackKey = KEY_RANGED;
-        willAttack = true;
-    }
-    else if keyboard_check_pressed(KEY_MAGIC)
-    {
-        lastAttackKey = KEY_MAGIC;
-        willAttack = true;
+        if keyboard_check_pressed(KEY_MELEE)
+        {
+            lastAttackKey[currentPlayer] = KEY_MELEE;
+            willAttack[currentPlayer] = true;
+        }
+        else if keyboard_check_pressed(KEY_RANGED)
+        {
+            lastAttackKey[currentPlayer] = KEY_RANGED;
+            willAttack[currentPlayer] = true;
+        }
+        else if keyboard_check_pressed(KEY_MAGIC)
+        {
+            lastAttackKey[currentPlayer] = KEY_MAGIC;
+            willAttack[currentPlayer] = true;
+        }
     }
 }
 

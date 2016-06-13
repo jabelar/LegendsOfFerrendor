@@ -1,60 +1,60 @@
-playerInstance[0].image_speed = 0.25;
+playerInstance[currentPlayer].image_speed = 0.25;
 
 scrUpdatePlayerDirection();
     
-switch (moveDirection)
+switch (moveDirection[currentPlayer])
 {
     case LEFT:
     {
-        playerInstance[0].x -= TILE_SIZE / TWEENS_PER_MOVE;
-        if (playerInstance[0].x <= tweenTargetX)
+        playerInstance[currentPlayer].x -= TILE_SIZE / TWEENS_PER_MOVE;
+        if (playerInstance[currentPlayer].x <= tweenTargetX[currentPlayer])
         {
-            state = WAIT_INPUT;
-            moveDirection = STILL;
+            state[currentPlayer] = WAIT_INPUT;
+            moveDirection[currentPlayer] = STILL;
         }
         break;
     }
     case RIGHT:
     {
-        playerInstance[0].x += TILE_SIZE / TWEENS_PER_MOVE;
-        if (playerInstance[0].x >= tweenTargetX)
+        playerInstance[currentPlayer].x += TILE_SIZE / TWEENS_PER_MOVE;
+        if (playerInstance[currentPlayer].x >= tweenTargetX[currentPlayer])
         {
-            state = WAIT_INPUT;
-            moveDirection = STILL;
+            state[currentPlayer] = WAIT_INPUT;
+            moveDirection[currentPlayer] = STILL;
         }
         break;
     }
     case UP:
     {
-        playerInstance[0].y -= TILE_SIZE / TWEENS_PER_MOVE;
-        if (playerInstance[0].y <= tweenTargetY)
+        playerInstance[currentPlayer].y -= TILE_SIZE / TWEENS_PER_MOVE;
+        if (playerInstance[currentPlayer].y <= tweenTargetY[currentPlayer])
         {
-            state = WAIT_INPUT;
-            moveDirection = STILL;
+            state[currentPlayer] = WAIT_INPUT;
+            moveDirection[currentPlayer] = STILL;
         }
         break;
     }
     case DOWN:
     {
-        playerInstance[0].y += TILE_SIZE / TWEENS_PER_MOVE;
-        if (playerInstance[0].y >= tweenTargetY)
+        playerInstance[currentPlayer].y += TILE_SIZE / TWEENS_PER_MOVE;
+        if (playerInstance[currentPlayer].y >= tweenTargetY[currentPlayer])
         {
-            state = WAIT_INPUT;
-            moveDirection = STILL;
+            state[currentPlayer] = WAIT_INPUT;
+            moveDirection[currentPlayer] = STILL;
         }
         break;
     }
     case STILL:
     {
-        state = WAIT_INPUT;
+        state[currentPlayer] = WAIT_INPUT;
         break;
     }
 }
 
-if (playerInstance[0].x == tweenTargetX and playerInstance[0].y == tweenTargetY)
+if (playerInstance[currentPlayer].x == tweenTargetX[currentPlayer] and playerInstance[currentPlayer].y == tweenTargetY[currentPlayer])
 {
-    state = WAIT_INPUT;
-    moveDirection = STILL;
+    state[currentPlayer] = WAIT_INPUT;
+    moveDirection[currentPlayer] = STILL;
 }
  
 scrKeepPlayerInRoom();

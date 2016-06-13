@@ -1,81 +1,81 @@
-if lastAttackKey == KEY_MELEE
+if lastAttackKey[currentPlayer] == KEY_MELEE
 {
     if playerInstance[0].sprite_index == spritesMoving[LEFT]
     {
-        moveDirection = MELEE_LEFT;
-        state = ATTACK_MELEE;
-        lastAttackKey = -1;
+        moveDirection[currentPlayer] = MELEE_LEFT;
+        state[currentPlayer] = ATTACK_MELEE;
+        lastAttackKey[currentPlayer] = -1;
     }
     if playerInstance[0].sprite_index == spritesMoving[RIGHT]
     {
-        moveDirection = MELEE_RIGHT;
-        state = ATTACK_MELEE;
-        lastAttackKey = -1;
+        moveDirection[currentPlayer] = MELEE_RIGHT;
+        state[currentPlayer] = ATTACK_MELEE;
+        lastAttackKey[currentPlayer] = -1;
     }
     if playerInstance[0].sprite_index == spritesMoving[UP]
     {
-        moveDirection = MELEE_UP;
-        state = ATTACK_MELEE;
-        lastAttackKey = -1;
+        moveDirection[currentPlayer] = MELEE_UP;
+        state[currentPlayer] = ATTACK_MELEE;
+        lastAttackKey[currentPlayer] = -1;
     }
     if playerInstance[0].sprite_index == spritesMoving[DOWN]
     {
-        moveDirection = MELEE_DOWN;
-        state = ATTACK_MELEE;
-        lastAttackKey = -1;
+        moveDirection[currentPlayer] = MELEE_DOWN;
+        state[currentPlayer] = ATTACK_MELEE;
+        lastAttackKey[currentPlayer] = -1;
     }
 }    
-else if lastAttackKey == KEY_RANGED
+else if lastAttackKey[currentPlayer] == KEY_RANGED
 {
     if playerInstance[0].sprite_index == spritesMoving[LEFT]
     {
-        moveDirection = RANGED_LEFT;
-        state = ATTACK_RANGED;
-        lastAttackKey = -1;
+        moveDirection[currentPlayer] = RANGED_LEFT;
+        state[currentPlayer] = ATTACK_RANGED;
+        lastAttackKey[currentPlayer] = -1;
     }
     if playerInstance[0].sprite_index == spritesMoving[RIGHT]
     {
-        moveDirection = RANGED_RIGHT;
-        state = ATTACK_RANGED;
-        lastAttackKey = -1;
+        moveDirection[currentPlayer] = RANGED_RIGHT;
+        state[currentPlayer] = ATTACK_RANGED;
+        lastAttackKey[currentPlayer] = -1;
     }
     if playerInstance[0].sprite_index == spritesMoving[UP]
     {
-        moveDirection = RANGED_UP;
-        state = ATTACK_RANGED;
-        lastAttackKey = -1;
+        moveDirection[currentPlayer] = RANGED_UP;
+        state[currentPlayer] = ATTACK_RANGED;
+        lastAttackKey[currentPlayer] = -1;
     }
     if playerInstance[0].sprite_index == spritesMoving[DOWN]
     {
-        moveDirection = RANGED_DOWN;
-        state = ATTACK_RANGED;
-        lastAttackKey = -1;
+        moveDirection[currentPlayer] = RANGED_DOWN;
+        state[currentPlayer] = ATTACK_RANGED;
+        lastAttackKey[currentPlayer] = -1;
     }
 }  
-else if lastAttackKey == KEY_MAGIC
+else if lastAttackKey[currentPlayer] == KEY_MAGIC
 {
     if playerInstance[0].sprite_index == spritesMoving[LEFT]
     {
-        moveDirection = MAGIC_LEFT;
-        state = ATTACK_MAGIC;
-        lastAttackKey = -1;
+        moveDirection[currentPlayer] = MAGIC_LEFT;
+        state[currentPlayer] = ATTACK_MAGIC;
+        lastAttackKey[currentPlayer] = -1;
     }
     if playerInstance[0].sprite_index == spritesMoving[RIGHT]
     {
-        moveDirection = MAGIC_RIGHT;
-        state = ATTACK_MAGIC;
-        lastAttackKey = -1;
+        moveDirection[currentPlayer] = MAGIC_RIGHT;
+        state[currentPlayer] = ATTACK_MAGIC;
+        lastAttackKey[currentPlayer] = -1;
     }
     if playerInstance[0].sprite_index == spritesMoving[UP]
     {
-        moveDirection = MAGIC_UP;
-        state = ATTACK_MAGIC;
-        lastAttackKey = -1;
+        moveDirection[currentPlayer] = MAGIC_UP;
+        state[currentPlayer] = ATTACK_MAGIC;
+        lastAttackKey[currentPlayer] = -1;
     }
     if playerInstance[0].sprite_index == spritesMoving[DOWN]
     {
-        moveDirection = MAGIC_DOWN;
-        state = ATTACK_MAGIC;
-        lastAttackKey = -1;
+        moveDirection[currentPlayer] = MAGIC_DOWN;
+        state[currentPlayer] = ATTACK_MAGIC;
+        lastAttackKey[currentPlayer] = -1;
     }
 }  

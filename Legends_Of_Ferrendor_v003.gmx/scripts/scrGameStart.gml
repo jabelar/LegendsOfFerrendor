@@ -18,8 +18,9 @@ ATTACK_MELEE = 3;
 ATTACK_RANGED = 4;
 ATTACK_MAGIC = 5;
 
-globalvar state, MAX_NUM_PLAYERS, numPlayers, willAttack;
+globalvar state, MAX_NUM_PLAYERS, numPlayers, willAttack, currentPlayer;
 MAX_NUM_PLAYERS = 4;
+currentPlayer = 0;
 numPlayers = MAX_NUM_PLAYERS; // later will change this based on LAN joined players
 for (i=0; i<MAX_NUM_PLAYERS; i++)
 {
@@ -31,7 +32,10 @@ for (i=0; i<MAX_NUM_PLAYERS; i++)
 // -1 = none, otherwise KEY_MELEE, KEY_MAGIC, KEY_RANGED)
 // it is cleared to -1 when attack happens at beginning of the turn
 globalvar lastAttackKey;
-lastAttackKey = -1;
+for (i=0; i<MAX_NUM_PLAYERS; i++)
+{
+    lastAttackKey[i] = -1;
+}
 
 // input mapping
 globalvar KEY_LEFT, KEY_RIGHT, KEY_UP, KEY_DOWN, KEY_MELEE, KEY_RANGED, KEY_MAGIC;
