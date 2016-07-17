@@ -3,7 +3,7 @@ playerInstance[currentPlayer].image_speed = 0;
 if (currentPlayer == 0)
 {
     // if direction key pressed check if attack key already pressed
-    if (keyboard_check_pressed(KEY_LEFT))  
+    if (keyboard_check(KEY_LEFT))  
     {
         if (keyboard_check(KEY_MELEE))
         {
@@ -33,7 +33,7 @@ if (currentPlayer == 0)
             }
         }
     }
-    else if (keyboard_check_pressed(KEY_RIGHT)) 
+    else if (keyboard_check(KEY_RIGHT)) 
     {
         if (keyboard_check(KEY_MELEE))
         {
@@ -63,7 +63,7 @@ if (currentPlayer == 0)
             }
         }
     }
-    else if (keyboard_check_pressed(KEY_UP)) 
+    else if (keyboard_check(KEY_UP)) 
     {
         if (keyboard_check(KEY_MELEE))
         {
@@ -93,7 +93,7 @@ if (currentPlayer == 0)
             }
         }
     }
-    else if (keyboard_check_pressed(KEY_DOWN)) 
+    else if (keyboard_check(KEY_DOWN)) 
     {
         if (keyboard_check(KEY_MELEE))
         {

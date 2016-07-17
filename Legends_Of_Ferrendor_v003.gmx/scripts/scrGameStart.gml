@@ -89,7 +89,7 @@ TWEENS_PER_MOVE =16;
 
 // timing constants
 globalvar STEPS_PER_TURN;
-STEPS_PER_TURN = room_speed * 5; // set the length in game steps of a turn to 5 seconds
+STEPS_PER_TURN = room_speed * 2; // set the length in game steps of a turn to 5 seconds
 
 globalvar turnTimer, actionTimer;
 turnTimer = STEPS_PER_TURN;
