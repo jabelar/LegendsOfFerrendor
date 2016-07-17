@@ -1,4 +1,4 @@
-playerInstance[currentPlayer] = image_speed = 0;
+playerInstance[currentPlayer].image_speed = 0;
 
 scrUpdatePlayerDirection();
 
@@ -25,7 +25,6 @@ if (currentPlayer == 0)
         else
         {
             moveDirection[currentPlayer] = LEFT;
-            // if (place_meeting(playerInstance[0].x - TILE_SIZE, playerInstance[0].y, objInteractable))
             if (tile_layer_find(999999, playerInstance[currentPlayer].x - TILE_SIZE, playerInstance[currentPlayer].y) != -1)
             {
                 scrCollision();
@@ -56,7 +55,6 @@ if (currentPlayer == 0)
         else
         {
             moveDirection = RIGHT;
-            // if (place_meeting(playerInstance[0].x + TILE_SIZE, playerInstance[0].y, objInteractable))
             if (tile_layer_find(999999, playerInstance[currentPlayer].x + TILE_SIZE, playerInstance[currentPlayer].y) != -1)
             {
                 scrCollision();
@@ -87,7 +85,6 @@ if (currentPlayer == 0)
         else
         {
             moveDirection[currentPlayer] = UP;
-            // if (place_meeting(playerInstance[0].x, playerInstance[0].y - TILE_SIZE, objInteractable))
             if (tile_layer_find(999999, playerInstance[currentPlayer].x, playerInstance[currentPlayer].y - TILE_SIZE) != -1)
             {
                 scrCollision();
@@ -118,7 +115,6 @@ if (currentPlayer == 0)
       else
         {
             moveDirection[currentPlayer] = DOWN;
-            // if (place_meeting(playerInstance[0].x, playerInstance[0].y + TILE_SIZE, objInteractable))
             if (tile_layer_find(999999, playerInstance[currentPlayer].x, playerInstance[currentPlayer].y + TILE_SIZE) != -1)
             {
                 scrCollision();
@@ -147,10 +143,9 @@ if (currentPlayer == 0)
             willAttack[currentPlayer] = true;
         }
     }
-}
-
+    
 scrProcessTurnTimer();
 
 scrKeepPlayerInView();
+}
 
-// show_debug_message("moveDirection = "+string(moveDirection)+" lastAttackKey = "+string(lastAttackKey)+" willAttack = "+string(willAttack));
