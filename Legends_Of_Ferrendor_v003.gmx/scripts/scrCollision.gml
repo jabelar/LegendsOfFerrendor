@@ -1,12 +1,12 @@
-state = WAIT_INPUT;
+state[currentPlayer] = WAIT_INPUT;
 
-tweenTargetX = playerInstance[0].x;
-tweenTargetY = playerInstance[0].y;
+tweenTargetX[currentPlayer] = playerInstance[currentPlayer].x;
+tweenTargetY[currentPlayer] = playerInstance[currentPlayer].y;
 
-if (moveDirection == LEFT) then moveDirection = LOOK_LEFT;
-else if (moveDirection == RIGHT) then moveDirection = LOOK_RIGHT;
-else if (moveDirection == UP) then moveDirection = LOOK_UP;
-else if (moveDirection == DOWN) then moveDirection = LOOK_DOWN;
+if (moveDirection[currentPlayer] == LEFT) then moveDirection[currentPlayer] = LOOK_LEFT;
+else if (moveDirection[currentPlayer] == RIGHT) then moveDirection[currentPlayer] = LOOK_RIGHT;
+else if (moveDirection[currentPlayer] == UP) then moveDirection[currentPlayer] = LOOK_UP;
+else if (moveDirection[currentPlayer] == DOWN) then moveDirection[currentPlayer] = LOOK_DOWN;
 
 show_debug_message("Collision");
 
