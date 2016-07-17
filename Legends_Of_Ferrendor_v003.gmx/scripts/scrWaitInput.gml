@@ -1,7 +1,5 @@
 playerInstance[currentPlayer].image_speed = 0;
 
-scrUpdatePlayerDirection();
-
 if (currentPlayer == 0)
 {
     // if direction key pressed check if attack key already pressed
@@ -54,7 +52,7 @@ if (currentPlayer == 0)
         }
         else
         {
-            moveDirection = RIGHT;
+            moveDirection[currentPlayer] = RIGHT;
             if (tile_layer_find(999999, playerInstance[currentPlayer].x + TILE_SIZE, playerInstance[currentPlayer].y) != -1)
             {
                 scrCollision();
@@ -143,6 +141,8 @@ if (currentPlayer == 0)
             willAttack[currentPlayer] = true;
         }
     }
+
+scrUpdatePlayerDirection();
     
 scrProcessTurnTimer();
 
