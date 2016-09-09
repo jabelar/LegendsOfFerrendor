@@ -104,16 +104,16 @@ playerInstance[3] = noone;
 
 // player health
 globalvar DEFAULT_HEALTH, playerHealth;
-DEFAULT_HEALTH = 20;
+DEFAULT_HEALTH = 60;
 playerHealth[0]= DEFAULT_HEALTH;
 playerHealth[1]= DEFAULT_HEALTH;
 playerHealth[2]= DEFAULT_HEALTH;
 playerHealth[3]= DEFAULT_HEALTH;
 
 globalvar DEFAULT_MELEE_DAMAGE, DEFAULT_RANGED_DAMAGE, DEFAULT_MAGIC_DAMAGE;
-DEFAULT_MELEE_DAMAGE = 5;
-DEFAULT_RANGED_DAMAGE = 2;
-DEFAULT_MAGIC_DAMAGE = 3; // note magic does more damage but has shorter range
+DEFAULT_MELEE_DAMAGE = 30;
+DEFAULT_RANGED_DAMAGE = 20;
+DEFAULT_MAGIC_DAMAGE = 20; // note magic does more damage but has shorter range
 
 globalvar DEFAULT_RANGED_RANGE, DEFAULT_MAGIC_RANGE;
 DEFAULT_RANGED_RANGE = 7;
