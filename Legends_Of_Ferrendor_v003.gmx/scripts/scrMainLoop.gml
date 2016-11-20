@@ -1,7 +1,7 @@
 if (keyboard_check_pressed(vk_escape)) then game_end();
 
 // process players
-for (currentPlayer=0; currentPlayer<MAX_NUM_PLAYERS; currentPlayer++)
+for (currentPlayer=0; currentPlayer<numPlayers; currentPlayer++)
 {
     switch (state[currentPlayer])
     {

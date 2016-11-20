@@ -1,5 +1,5 @@
 // keep player from leaving room area
-for (i=0; i<MAX_NUM_PLAYERS; i++)
+for (i=0; i<numPlayers; i++)
 {
     {
         if playerInstance[i].x < 0
