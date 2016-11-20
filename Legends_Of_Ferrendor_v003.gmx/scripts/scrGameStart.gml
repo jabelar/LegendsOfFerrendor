@@ -26,7 +26,7 @@ currentPlayer = 0;
 numPlayers = MAX_NUM_PLAYERS; // later will change this based on LAN joined players
 for (i=0; i<MAX_NUM_PLAYERS; i++)
 {
-    state[i] = WAIT_INPUT;
+    state[i] = OPENING_CREDITS;
     willAttack[i] = false; // Indicates whether an attack will start on next turn
 }
 

@@ -1,14 +1,18 @@
+for (var i=0; i<8; i++)
+{
+   background_visible[i] = false;
+}
+
 if (timeInRoom < room_speed * 5)
 {
-   room_set_background(room, 0, true, false, bgOpeningCredits1, 0, 0, false, false, 0, 0, 1);
+   background_visible[0] = true;
 }
 else if (timeInRoom < room_speed * 10)
 {
-   room_set_background(room, 0, true, false, bgOpeningCredits1, 0, 0, false, false, 0, 0, 1);
+   background_visible[1] = true;
 }
 else
 {
    room_goto(roomMainMenu);
-   state[currentPlayer] = MAIN_MENU;
 }
 

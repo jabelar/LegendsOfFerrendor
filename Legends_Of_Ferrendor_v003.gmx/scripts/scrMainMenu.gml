@@ -5,6 +5,5 @@ if (timeInRoom < room_speed * 5)
 else
 {
    room_goto(roomBattlefield);
-   state[currentPlayer] = WAIT_INPUT;
 }
 
