@@ -11,13 +11,14 @@ globalvar TILE_SIZE;
 TILE_SIZE = 256;
 
 // state constants
-globalvar MAIN_MENU, WAIT_INPUT, MOVING, ATTACK_MELEE, ATTACK_RANGED, ATTACK_MAGIC;
-MAIN_MENU = 0;
-WAIT_INPUT = 1;
-MOVING = 2;
-ATTACK_MELEE = 3;
-ATTACK_RANGED = 4;
-ATTACK_MAGIC = 5;
+globalvar OPENING_CREDITS, MAIN_MENU, WAIT_INPUT, MOVING, ATTACK_MELEE, ATTACK_RANGED, ATTACK_MAGIC;
+OPENING_CREDITS = 0;
+MAIN_MENU = 1;
+WAIT_INPUT = 2;
+MOVING = 3;
+ATTACK_MELEE = 4;
+ATTACK_RANGED = 5;
+ATTACK_MAGIC = 6;
 
 globalvar state, MAX_NUM_PLAYERS, numPlayers, willAttack, currentPlayer;
 MAX_NUM_PLAYERS = 4;
@@ -91,7 +92,8 @@ TWEENS_PER_MOVE =16;
 globalvar STEPS_PER_TURN;
 STEPS_PER_TURN = room_speed * 2; // set the length in game steps of a turn to 5 seconds
 
-globalvar turnTimer, actionTimer;
+globalvar timeInRoom, turnTimer, actionTimer;
+timeInRoom = -1;
 turnTimer = STEPS_PER_TURN;
 actionTimer = TWEENS_PER_MOVE;
 

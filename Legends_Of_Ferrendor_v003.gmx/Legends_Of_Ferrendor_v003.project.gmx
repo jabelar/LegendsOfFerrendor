@@ -19,6 +19,10 @@
   <backgrounds name="background">
     <background>background\background0</background>
     <background>background\background1</background>
+    <backgrounds name="openingCredits">
+      <background>background\bgOpeningCredits1</background>
+      <background>background\bgOpeningCredits2</background>
+    </backgrounds>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -38,6 +42,7 @@
       <script>scripts\scrAttackMelee.gml</script>
       <script>scripts\scrAttackRanged.gml</script>
       <script>scripts\scrAttackMagic.gml</script>
+      <script>scripts\scrOpeningCredits.gml</script>
     </scripts>
     <script>scripts\scrCollision.gml</script>
     <scripts name="attacks">
