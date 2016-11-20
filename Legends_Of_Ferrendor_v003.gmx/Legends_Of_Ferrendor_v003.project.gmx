@@ -11,6 +11,7 @@
     <sprite>sprites\sprPlayerRight</sprite>
     <sprite>sprites\sprPlayerLeft</sprite>
     <sprite>sprites\sprObstacle</sprite>
+    <sprite>sprites\spriteGameController</sprite>
     <sprite>sprites\sprSword</sprite>
     <sprite>sprites\sprArrow</sprite>
     <sprite>sprites\sprMagic</sprite>
@@ -74,6 +75,8 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\roomOpeningCredits</room>
+    <room>rooms\roomMainMenu</room>
     <room>rooms\roomBattlefield</room>
   </rooms>
   <help>
