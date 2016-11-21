@@ -7,8 +7,9 @@ globalvar debugMessage;
 debugMessage = "";
 
 // graphics constants
-globalvar TILE_SIZE;
+globalvar TILE_SIZE, LAYER_OBSTACLES;
 TILE_SIZE = 256;
+LAYER_OBSTACLES = 999999;
 
 // state constants
 globalvar OPENING_CREDITS, MAIN_MENU, WAIT_INPUT, MOVING, ATTACK_MELEE, ATTACK_RANGED, ATTACK_MAGIC;

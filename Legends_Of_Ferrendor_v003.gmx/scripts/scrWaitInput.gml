@@ -23,7 +23,7 @@ if (currentPlayer == 0)
         else
         {
             moveDirection[currentPlayer] = LEFT;
-            if (tile_layer_find(999999, playerInstance[currentPlayer].x - TILE_SIZE, playerInstance[currentPlayer].y) != -1)
+            if (tile_layer_find(LAYER_OBSTACLES, playerInstance[currentPlayer].x - TILE_SIZE, playerInstance[currentPlayer].y) != -1)
             {
                 scrCollision();
             }
@@ -53,7 +53,7 @@ if (currentPlayer == 0)
         else
         {
             moveDirection[currentPlayer] = RIGHT;
-            if (tile_layer_find(999999, playerInstance[currentPlayer].x + TILE_SIZE, playerInstance[currentPlayer].y) != -1)
+            if (tile_layer_find(LAYER_OBSTACLES, playerInstance[currentPlayer].x + TILE_SIZE, playerInstance[currentPlayer].y) != -1)
             {
                 scrCollision();
             }
@@ -83,7 +83,7 @@ if (currentPlayer == 0)
         else
         {
             moveDirection[currentPlayer] = UP;
-            if (tile_layer_find(999999, playerInstance[currentPlayer].x, playerInstance[currentPlayer].y - TILE_SIZE) != -1)
+            if (tile_layer_find(LAYER_OBSTACLES, playerInstance[currentPlayer].x, playerInstance[currentPlayer].y - TILE_SIZE) != -1)
             {
                 scrCollision();
             }
@@ -113,7 +113,7 @@ if (currentPlayer == 0)
       else
         {
             moveDirection[currentPlayer] = DOWN;
-            if (tile_layer_find(999999, playerInstance[currentPlayer].x, playerInstance[currentPlayer].y + TILE_SIZE) != -1)
+            if (tile_layer_find(LAYER_OBSTACLES, playerInstance[currentPlayer].x, playerInstance[currentPlayer].y + TILE_SIZE) != -1)
             {
                 scrCollision();
             }

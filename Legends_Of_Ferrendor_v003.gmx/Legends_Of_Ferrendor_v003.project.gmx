@@ -47,10 +47,10 @@
     <script>scripts\scrCollision.gml</script>
     <scripts name="attacks">
       <scripts name="damage">
-        <script>scripts\scrDamagePlayerRanged.gml</script>
-        <script>scripts\scrDamagePlayerMagic.gml</script>
-        <script>scripts\scrDamageObstacleRanged.gml</script>
-        <script>scripts\scrDamageObstacleMagic.gml</script>
+        <script>scripts\scrHitEntityRanged.gml</script>
+        <script>scripts\scrHitEntityMagic.gml</script>
+        <script>scripts\scrHitObstacleRanged.gml</script>
+        <script>scripts\scrHitObstacleMagic.gml</script>
         <script>scripts\scrPlayerDies.gml</script>
       </scripts>
       <scripts name="create">
@@ -79,7 +79,9 @@
     <object>objects\objMelee</object>
     <object>objects\objRanged</object>
     <object>objects\objMagic</object>
-    <objects name="players">
+    <objects name="entities">
+      <object>objects\objEntity</object>
+      <object>objects\objEntityLiving</object>
       <object>objects\objPlayer</object>
     </objects>
   </objects>
