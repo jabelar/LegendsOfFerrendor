@@ -20,9 +20,10 @@ ATTACK_MELEE = 4;
 ATTACK_RANGED = 5;
 ATTACK_MAGIC = 6;
 
-globalvar state, MAX_NUM_PLAYERS, numPlayers, willAttack, currentPlayer;
-MAX_NUM_PLAYERS = 4;
+globalvar state, MAX_NUM_PLAYERS, numPlayers, willAttack, currentPlayer, clientPlayer;
+MAX_NUM_PLAYERS = 1;
 currentPlayer = 0;
+clientPlayer = 0;
 numPlayers = MAX_NUM_PLAYERS; // later will change this based on LAN joined players
 for (i=0; i<MAX_NUM_PLAYERS; i++)
 {

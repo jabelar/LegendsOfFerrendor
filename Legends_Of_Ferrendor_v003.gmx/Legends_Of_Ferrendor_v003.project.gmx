@@ -64,6 +64,10 @@
         <script>scripts\scrMeleeStep.gml</script>
       </scripts>
     </scripts>
+    <scripts name="draw">
+      <script>scripts\scrDrawGUI.gml</script>
+      <script>scripts\scrDraw.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>

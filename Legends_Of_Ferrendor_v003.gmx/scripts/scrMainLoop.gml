@@ -3,9 +3,9 @@ if (keyboard_check_pressed(vk_escape)) then game_end();
 timeInRoom += 1;
 
 // process players
-for (currentPlayer=0; currentPlayer<numPlayers; currentPlayer++)
-{
-    switch (state[currentPlayer])
+// for (currentPlayer=0; currentPlayer<numPlayers; currentPlayer++)
+// {
+    switch (state[clientPlayer])
     {
        case OPENING_CREDITS: scrOpeningCredits(); break;
        case MAIN_MENU: scrMainMenu(); break;
@@ -15,7 +15,7 @@ for (currentPlayer=0; currentPlayer<numPlayers; currentPlayer++)
        case ATTACK_RANGED: scrAttackRanged(); break;
        case ATTACK_MAGIC: scrAttackMagic(); break;
     } 
-}
+// }
 
 with objRanged
 {

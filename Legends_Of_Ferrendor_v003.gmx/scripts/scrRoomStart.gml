@@ -2,19 +2,19 @@ switch (room)
 {
    case roomOpeningCredits:
    {
-      state[currentPlayer] = OPENING_CREDITS;
+      state[clientPlayer] = OPENING_CREDITS;
       timeInRoom = -1;
       break;
    }
    case roomMainMenu:
    {
-      state[currentPlayer] = MAIN_MENU;
+      state[clientPlayer] = MAIN_MENU;
       timeInRoom = -1;
       break;
    }
    case roomBattlefield:
    {
-      state[currentPlayer] = WAIT_INPUT;
+      state[clientPlayer] = WAIT_INPUT;
       timeInRoom = -1;
      // create players
      for (i=0; i<numPlayers; i++)
