@@ -5,14 +5,10 @@ switch (room)
 {
    case roomOpeningCredits:
    {
-      draw_text(0, 100, "Time Remaining: "+string(timeInRoom));
-      draw_text(0, 200, "state = "+string(state[clientPlayer]));
-      break;
+       break;
    }
    case roomMainMenu:
    {
-      draw_text(0, 100, "Time Remaining: "+string(timeInRoom));
-      draw_text(0, 200, "state = "+string(state[clientPlayer]));
       break;
    }
    default:

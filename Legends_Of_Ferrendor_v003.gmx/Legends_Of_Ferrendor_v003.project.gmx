@@ -19,6 +19,7 @@
     <sprite>sprites\sprSword</sprite>
     <sprite>sprites\sprArrow</sprite>
     <sprite>sprites\sprMagic</sprite>
+    <sprite>sprites\sprTreeBig</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -78,7 +79,6 @@
   </fonts>
   <objects name="objects">
     <object>objects\objGameController</object>
-    <object>objects\objObstacle</object>
     <object>objects\objInteractable</object>
     <object>objects\objMelee</object>
     <object>objects\objRanged</object>
@@ -87,6 +87,11 @@
       <object>objects\objEntity</object>
       <object>objects\objEntityLiving</object>
       <object>objects\objPlayer</object>
+    </objects>
+    <object>objects\objSortable</object>
+    <objects name="Decoration">
+      <object>objects\objDecoration</object>
+      <object>objects\objTreeBig</object>
     </objects>
   </objects>
   <rooms name="rooms">

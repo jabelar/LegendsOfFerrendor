@@ -1,4 +1,4 @@
-if (timeInRoom < room_speed * 5)
+if (timeInRoom < room_speed * 2)
 {
 }
 else
