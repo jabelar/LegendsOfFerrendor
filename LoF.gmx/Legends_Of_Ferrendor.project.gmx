@@ -25,6 +25,12 @@
           <sprite>sprites\sprPlayerRight</sprite>
           <sprite>sprites\sprPlayerLeft</sprite>
         </sprites>
+        <sprites name="mobs">
+          <sprite>sprites\sprBeastRight</sprite>
+          <sprite>sprites\sprBeastLeft</sprite>
+          <sprite>sprites\sprBeastUp</sprite>
+          <sprite>sprites\sprBeastDown</sprite>
+        </sprites>
       </sprites>
       <sprite>sprites\sprSword</sprite>
       <sprites name="weapons">
@@ -53,7 +59,7 @@
     <script>scripts\scrProcessTurnTimer.gml</script>
     <script>scripts\updateStateForAttackInNewDirection.gml</script>
     <script>scripts\updateStateForAttackInExistingDirection.gml</script>
-    <scripts name="states">
+    <scripts name="playerStates">
       <script>scripts\scrMoving.gml</script>
       <script>scripts\scrMovingSmooth.gml</script>
       <script>scripts\scrMainMenu.gml</script>
@@ -92,6 +98,12 @@
     <script>scripts\scrTestGit.gml</script>
     <script>scripts\scrChangeMusic.gml</script>
     <script>scripts\scrDecorationFade.gml</script>
+    <scripts name="mobs">
+      <script>scripts\scrMobAI.gml</script>
+      <script>scripts\scrMobAISmooth.gml</script>
+      <script>scripts\scrMobMovement.gml</script>
+      <script>scripts\scrMobMovementSmooth.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>
@@ -99,13 +111,32 @@
   <objects name="objects">
     <object>objects\objGameController</object>
     <object>objects\objInteractable</object>
-    <object>objects\objMelee</object>
-    <object>objects\objRanged</object>
-    <object>objects\objMagic</object>
     <objects name="entities">
       <object>objects\objEntity</object>
       <object>objects\objEntityLiving</object>
-      <object>objects\objPlayer</object>
+      <objects name="livingEntities">
+        <objects name="mobs">
+          <object>objects\objMob</object>
+          <objects name="passiveMobs">
+            <object>objects\objMobPassive</object>
+          </objects>
+          <objects name="aggressiveMobs">
+            <object>objects\objMobAggressive</object>
+            <object>objects\objMobBeast</object>
+          </objects>
+          <objects name="bosses">
+            <object>objects\objMobBoss</object>
+          </objects>
+        </objects>
+        <objects name="players">
+          <object>objects\objPlayer</object>
+        </objects>
+      </objects>
+      <objects name="weapons">
+        <object>objects\objMagic</object>
+        <object>objects\objRanged</object>
+        <object>objects\objMelee</object>
+      </objects>
     </objects>
     <object>objects\objSortable</object>
     <objects name="Decoration">

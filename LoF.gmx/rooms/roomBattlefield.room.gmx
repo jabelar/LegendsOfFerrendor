@@ -63,6 +63,7 @@
     <instance objName="objTreeBig" x="2048" y="6144" name="inst_B47DFBC5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objTreeBig" x="0" y="5120" name="inst_8E8547CF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objTreeBig" x="2048" y="8960" name="inst_A50CB585" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objMobBeast" x="1792" y="8960" name="inst_0ECB6EC5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="background1" x="512" y="0" w="256" h="256" xo="0" yo="0" id="10000042" name="inst_C4761A32" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
