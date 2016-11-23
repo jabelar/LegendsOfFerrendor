@@ -14,16 +14,24 @@
     </sounds>
   </sounds>
   <sprites name="sprites">
-    <sprite>sprites\sprPlayerUp</sprite>
-    <sprite>sprites\sprPlayerDown</sprite>
-    <sprite>sprites\sprPlayerRight</sprite>
-    <sprite>sprites\sprPlayerLeft</sprite>
     <sprite>sprites\sprObstacle</sprite>
     <sprite>sprites\spriteGameController</sprite>
-    <sprite>sprites\sprSword</sprite>
-    <sprite>sprites\sprArrow</sprite>
-    <sprite>sprites\sprMagic</sprite>
     <sprite>sprites\sprTreeBig</sprite>
+    <sprites name="entities">
+      <sprites name="livingEntities">
+        <sprites name="players">
+          <sprite>sprites\sprPlayerUp</sprite>
+          <sprite>sprites\sprPlayerDown</sprite>
+          <sprite>sprites\sprPlayerRight</sprite>
+          <sprite>sprites\sprPlayerLeft</sprite>
+        </sprites>
+      </sprites>
+      <sprite>sprites\sprSword</sprite>
+      <sprites name="weapons">
+        <sprite>sprites\sprArrow</sprite>
+        <sprite>sprites\sprMagic</sprite>
+      </sprites>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
