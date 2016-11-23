@@ -19,6 +19,9 @@ switch (room)
       timeInRoom = -1;
       scrChangeMusic(sndBattlefieldWander);
       
+      // initialize fog of war
+      scrInitialFogOfWar();
+      
       // create players
      for (i=0; i<numPlayers; i++)
      {

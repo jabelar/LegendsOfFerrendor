@@ -67,3 +67,5 @@ if (playerInstance[currentPlayer].x == tweenTargetX[currentPlayer] and playerIns
 scrKeepPlayerInRoom();
 
 scrKeepPlayerInView();
+
+scrUpdateFogOfWar();

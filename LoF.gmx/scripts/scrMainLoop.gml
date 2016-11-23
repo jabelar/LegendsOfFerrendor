@@ -25,7 +25,7 @@ switch (state[clientPlayer])
 {
    case WAIT_INPUT_SMOOTH: scrMobAISmooth(); scrMobMovementSmooth(); break;
    case MOVING_SMOOTH: scrMobMovementSmooth(); break;
-   case WAIT_INPUT: scrMobAI(); break;
+   case WAIT_INPUT: scrMobAI(); scrMobMovement(); break;
    case MOVING: scrMobMovement(); break;
 }
 

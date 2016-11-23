@@ -7,9 +7,10 @@ globalvar debugMessage;
 debugMessage = "";
 
 // graphics constants
-globalvar TILE_SIZE, LAYER_OBSTACLES;
+globalvar TILE_SIZE, LAYER_OBSTACLES, LAYER_FOG;
 TILE_SIZE = 256;
 LAYER_OBSTACLES = 999999;
+LAYER_FOG = -10;
 
 // sound constants
 globalvar backgroundMusic;

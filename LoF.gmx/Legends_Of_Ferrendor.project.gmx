@@ -41,6 +41,7 @@
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
+    <background>background\bgFogOfWar</background>
     <background>background\background1</background>
     <backgrounds name="openingCredits">
       <background>background\bgOpeningCredits1</background>
@@ -104,6 +105,8 @@
       <script>scripts\scrMobMovement.gml</script>
       <script>scripts\scrMobMovementSmooth.gml</script>
     </scripts>
+    <script>scripts\scrInitialFogOfWar.gml</script>
+    <script>scripts\scrUpdateFogOfWar.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>

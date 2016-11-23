@@ -1,5 +1,10 @@
 var timePerScreen = 4;
 
+if (keyboard_check_pressed(vk_space))
+{
+   timeInRoom += room_speed * timePerScreen;
+}
+
 for (var i=0; i<8; i++)
 {
    background_visible[i] = false;
