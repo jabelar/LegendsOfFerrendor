@@ -7,8 +7,9 @@ globalvar debugMessage;
 debugMessage = "";
 
 // graphics constants
-globalvar TILE_SIZE, LAYER_OBSTACLES, LAYER_FOG;
+globalvar TILE_SIZE, TILE_SIZE_FOG, LAYER_OBSTACLES, LAYER_FOG;
 TILE_SIZE = 256;
+TILE_SIZE_FOG = TILE_SIZE / 3;
 LAYER_OBSTACLES = 999999;
 LAYER_FOG = -10;
 
