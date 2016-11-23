@@ -8,6 +8,10 @@
     <sounds name="weapons">
       <sound>sound\sndArrowHit</sound>
     </sounds>
+    <sounds name="music">
+      <sound>sound\sndOpeningCredits</sound>
+      <sound>sound\sndBattlefieldWander</sound>
+    </sounds>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprPlayerUp</sprite>

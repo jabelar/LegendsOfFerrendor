@@ -11,6 +11,10 @@ globalvar TILE_SIZE, LAYER_OBSTACLES;
 TILE_SIZE = 256;
 LAYER_OBSTACLES = 999999;
 
+// sound constants
+globalvar backgroundMusic;
+backgroundMusic = sndOpeningCredits;
+
 // state constants
 globalvar OPENING_CREDITS, MAIN_MENU, WAIT_INPUT, MOVING_SMOOTH, MOVING, ATTACK_MELEE, ATTACK_RANGED, ATTACK_MAGIC;
 OPENING_CREDITS = 0;

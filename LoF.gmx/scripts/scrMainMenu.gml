@@ -1,7 +1,4 @@
-if (timeInRoom < room_speed * 2)
-{
-}
-else
+if keyboard_check_pressed(vk_space)
 {
    room_goto(roomBattlefield);
 }
