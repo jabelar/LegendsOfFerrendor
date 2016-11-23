@@ -14,7 +14,7 @@ switch (room)
    }
    case roomBattlefield:
    {
-      state[clientPlayer] = WAIT_INPUT;
+      state[clientPlayer] = WAIT_INPUT_SMOOTH;
       timeInRoom = -1;
      // create players
      for (i=0; i<numPlayers; i++)

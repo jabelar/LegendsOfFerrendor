@@ -36,20 +36,24 @@
     <script>scripts\scrRoomStart.gml</script>
     <script>scripts\scrKeepPlayerInView.gml</script>
     <script>scripts\scrKeepPlayerInRoom.gml</script>
+    <script>scripts\scrKeepPlayerInRoomSmooth.gml</script>
     <script>scripts\scrUpdatePlayerDirection.gml</script>
     <script>scripts\scrProcessTurnTimer.gml</script>
     <script>scripts\updateStateForAttackInNewDirection.gml</script>
     <script>scripts\updateStateForAttackInExistingDirection.gml</script>
     <scripts name="states">
       <script>scripts\scrMoving.gml</script>
+      <script>scripts\scrMovingSmooth.gml</script>
       <script>scripts\scrMainMenu.gml</script>
       <script>scripts\scrWaitInput.gml</script>
+      <script>scripts\scrWaitInputSmooth.gml</script>
       <script>scripts\scrAttackMelee.gml</script>
       <script>scripts\scrAttackRanged.gml</script>
       <script>scripts\scrAttackMagic.gml</script>
       <script>scripts\scrOpeningCredits.gml</script>
     </scripts>
     <script>scripts\scrCollision.gml</script>
+    <script>scripts\scrCollisionSmooth.gml</script>
     <scripts name="attacks">
       <scripts name="damage">
         <script>scripts\scrHitEntityRanged.gml</script>

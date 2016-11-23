@@ -9,6 +9,8 @@ timeInRoom += 1;
     {
        case OPENING_CREDITS: scrOpeningCredits(); break;
        case MAIN_MENU: scrMainMenu(); break;
+       case WAIT_INPUT_SMOOTH: scrWaitInputSmooth(); break;
+       case MOVING_SMOOTH: scrMovingSmooth(); break;
        case WAIT_INPUT: scrWaitInput(); break;
        case MOVING: scrMoving(); break;
        case ATTACK_MELEE: scrAttackMelee(); break;
