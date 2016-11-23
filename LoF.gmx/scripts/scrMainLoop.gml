@@ -21,14 +21,19 @@ timeInRoom += 1;
 // }
 
 // process mobs
-switch (state[clientPlayer])
+with objMob
 {
-   case WAIT_INPUT_SMOOTH: scrMobAISmooth(); scrMobMovementSmooth(); break;
-   case MOVING_SMOOTH: scrMobMovementSmooth(); break;
-   case WAIT_INPUT: scrMobAI(); scrMobMovement(); break;
-   case MOVING: scrMobMovement(); break;
+    switch (state[clientPlayer])
+    {
+       case WAIT_INPUT_SMOOTH: scrMobAISmooth(); scrMobMovementSmooth(); break;
+       case MOVING_SMOOTH: scrMobMovementSmooth(); break;
+       case WAIT_INPUT: scrMobAI(); scrMobMovement(); break;
+       case MOVING: scrMobMovement(); break;
+       case ATTACK_MELEE: scrMobMovement(); break;
+       case ATTACK_RANGED: scrMobMovement(); break;
+       case ATTACK_MAGIC: scrMobMovement(); break;
+    }
 }
-
 
 // process weapons
 with objRanged

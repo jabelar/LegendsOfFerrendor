@@ -70,6 +70,7 @@
       <script>scripts\scrAttackRanged.gml</script>
       <script>scripts\scrAttackMagic.gml</script>
       <script>scripts\scrOpeningCredits.gml</script>
+      <script>scripts\scrDying.gml</script>
     </scripts>
     <script>scripts\scrCollisionSmooth.gml</script>
     <script>scripts\scrCollision.gml</script>
@@ -104,6 +105,22 @@
       <script>scripts\scrMobAISmooth.gml</script>
       <script>scripts\scrMobMovement.gml</script>
       <script>scripts\scrMobMovementSmooth.gml</script>
+      <scripts name="mobStates">
+        <script>scripts\scrIdle.gml</script>
+        <script>scripts\scrWandering.gml</script>
+        <script>scripts\scrWanderingSmooth.gml</script>
+        <script>scripts\scrAttackingRanged.gml</script>
+        <script>scripts\scrAttackingMelee.gml</script>
+        <script>scripts\scrFleeing.gml</script>
+        <script>scripts\scrFleeingSmooth.gml</script>
+        <script>scripts\scrPatrolling.gml</script>
+        <script>scripts\scrPatrollingSmooth.gml</script>
+        <script>scripts\scrMobDying.gml</script>
+      </scripts>
+      <scripts name="mobCreate">
+        <script>scripts\scrMobBeastCreate.gml</script>
+        <script>scripts\scrCommonMobCreate.gml</script>
+      </scripts>
     </scripts>
     <script>scripts\scrInitialFogOfWar.gml</script>
     <script>scripts\scrUpdateFogOfWar.gml</script>
