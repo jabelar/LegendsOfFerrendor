@@ -82,6 +82,7 @@
       <script>scripts\scrDraw.gml</script>
     </scripts>
     <script>scripts\scrTestGit.gml</script>
+    <script>scripts\scrChangeMusic.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>

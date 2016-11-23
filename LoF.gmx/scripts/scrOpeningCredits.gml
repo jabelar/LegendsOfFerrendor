@@ -1,4 +1,4 @@
-var timePerScreen = 2;
+var timePerScreen = 4;
 
 for (var i=0; i<8; i++)
 {
@@ -7,9 +7,13 @@ for (var i=0; i<8; i++)
 
 if (timeInRoom < room_speed * timePerScreen)
 {
-   background_visible[0] = true;
+   // give some time for initial resolution change
 }
 else if (timeInRoom < room_speed * timePerScreen * 2)
+{
+   background_visible[0] = true;
+}
+else if (timeInRoom < room_speed * timePerScreen * 3)
 {
    background_visible[1] = true;
 }
