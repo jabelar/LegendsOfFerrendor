@@ -1,7 +1,7 @@
 with (playerInstance[currentPlayer])
 {
    var tile, range, center_x, center_y, tile_x, tile_y, tile_dist, range_squared;
-   range = TILE_SIZE / TILE_SIZE_FOG * 5;
+   range = TILE_SIZE / TILE_SIZE_FOG * 8;
    center_x = x + TILE_SIZE / 2;
    center_y = y + TILE_SIZE / 2;
    range_squared = power(range * TILE_SIZE_FOG / 2, 2);

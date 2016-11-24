@@ -26,7 +26,7 @@ with objMob
     switch (state[clientPlayer])
     {
        case WAIT_INPUT_SMOOTH: scrMobAISmooth(); scrMobMovementSmooth(); break;
-       case MOVING_SMOOTH: scrMobMovementSmooth(); break;
+       case MOVING_SMOOTH: scrMobAISmooth(); scrMobMovementSmooth(); break;
        case WAIT_INPUT: scrMobAI(); scrMobMovement(); break;
        case MOVING: scrMobMovement(); break;
        case ATTACK_MELEE: scrMobMovement(); break;

@@ -121,6 +121,7 @@
         <script>scripts\scrMobBeastCreate.gml</script>
         <script>scripts\scrCommonMobCreate.gml</script>
       </scripts>
+      <script>scripts\scrUpdateMobSprite.gml</script>
     </scripts>
     <script>scripts\scrInitialFogOfWar.gml</script>
     <script>scripts\scrUpdateFogOfWar.gml</script>

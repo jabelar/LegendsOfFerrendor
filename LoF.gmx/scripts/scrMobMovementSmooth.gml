@@ -1,6 +1,3 @@
-x += mobSpeed;
-if x > room_width-TILE_SIZE then x =0;
-
 switch mobState
 {
    case IDLE:
@@ -39,3 +36,6 @@ switch mobState
       break;
    }
 }
+
+scrUpdateMobSprite();
+

@@ -26,8 +26,11 @@ switch (room)
         playerInstance[i].playerNumber = i;
      }
       // initialize fog of war
-      scrInitialFogOfWar();
-      scrUpdateFogOfWar();
+      if FOG_ENABLED
+      {
+         scrInitialFogOfWar();
+         scrUpdateFogOfWar();
+      }
       
      break;
    }

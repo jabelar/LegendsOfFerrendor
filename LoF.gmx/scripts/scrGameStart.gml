@@ -1,3 +1,6 @@
+// randomiz the random generator seed
+randomize();
+
 // initialize the view
 view_xport[0] = 0;
 view_wport[0] = 1080;
@@ -7,11 +10,12 @@ globalvar debugMessage;
 debugMessage = "";
 
 // graphics constants
-globalvar TILE_SIZE, TILE_SIZE_FOG, LAYER_OBSTACLES, LAYER_FOG;
+globalvar TILE_SIZE, TILE_SIZE_FOG, LAYER_OBSTACLES, LAYER_FOG, FOG_ENABLED;
 TILE_SIZE = 256;
 TILE_SIZE_FOG = TILE_SIZE / 3;
 LAYER_OBSTACLES = 999999;
 LAYER_FOG = -10;
+FOG_ENABLED = false;
 
 // sound constants
 globalvar backgroundMusic;
@@ -40,6 +44,10 @@ ATTACKING_RANGED = 3;
 FLEEING = 4;
 PATROLLING = 5;
 MOB_DYING = 6;
+
+// Mob AI
+globalvar AI_INTERVAL;
+AI_INTERVAL = 2;
 
 globalvar state, MAX_NUM_PLAYERS, numPlayers, willAttack, currentPlayer, clientPlayer;
 MAX_NUM_PLAYERS = 1;
@@ -76,27 +84,28 @@ globalvar UP, DOWN, LEFT, RIGHT, STILL;
 globalvar MELEE_UP, MELEE_DOWN, MELEE_LEFT, MELEE_RIGHT;
 globalvar RANGED_UP, RANGED_DOWN, RANGED_LEFT, RANGED_RIGHT;
 globalvar MAGIC_UP, MAGIC_DOWN, MAGIC_LEFT, MAGIC_RIGHT;
+globalvar LOOK_UP, LOOK_DOWN, LOOK_LEFT, LOOK_RIGHT;
 UP = 0;
 DOWN = 1;
 LEFT = 2
 RIGHT = 3;
-STILL = 5;
-MELEE_UP = 6;
-MELEE_DOWN = 7;
-MELEE_LEFT = 8;
-MELEE_RIGHT = 9;
-RANGED_UP = 10;
-RANGED_DOWN = 11;
-RANGED_LEFT = 12;
-RANGED_RIGHT = 13;
-MAGIC_UP = 14;
-MAGIC_DOWN = 15;
-MAGIC_LEFT = 16;
-MAGIC_RIGHT = 17;
-LOOK_UP = 18;
-LOOK_DOWN = 19;
-LOOK_LEFT = 20;
-LOOK_RIGHT = 21;
+STILL = 4;
+MELEE_UP = 5;
+MELEE_DOWN = 6;
+MELEE_LEFT = 7;
+MELEE_RIGHT = 8;
+RANGED_UP = 9;
+RANGED_DOWN = 10;
+RANGED_LEFT = 11;
+RANGED_RIGHT = 12;
+MAGIC_UP = 13;
+MAGIC_DOWN = 14;
+MAGIC_LEFT = 15;
+MAGIC_RIGHT = 16;
+LOOK_UP = 17;
+LOOK_DOWN = 18;
+LOOK_LEFT = 19;
+LOOK_RIGHT = 20;
 
 globalvar moveDirection, tweenTargetX, tweenTargetY;
 for (i=0; i<MAX_NUM_PLAYERS; i++)
