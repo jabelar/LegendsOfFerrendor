@@ -1,6 +1,5 @@
+/*
 show_debug_message("wandering smooth with mobMoveDirection = "+string(mobMoveDirection));
-
-show_debug_message("LEFT = "+string(LEFT));
 
 switch mobMoveDirection
 {
@@ -85,4 +84,4 @@ if y > room_height - TILE_SIZE
    mobMoveDirection = STILL;
    mobState = IDLE;
 }
-
+*/

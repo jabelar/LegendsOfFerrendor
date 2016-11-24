@@ -19,6 +19,9 @@ switch (room)
       timeInRoom = -1;
       scrChangeMusic(sndBattlefieldWander);
       
+      // populate motion planning grid
+      scrPopulateMotionPlanningGrid();
+      
       // create players
      for (i=0; i<numPlayers; i++)
      {

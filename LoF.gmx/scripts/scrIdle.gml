@@ -9,7 +9,10 @@ if (timeInRoom mod (room_speed * AI_INTERVAL) = 0)
    {
       show_debug_message("start wandering");
       mobState = WANDERING;
-      if rand < 25 // vertical wander
+      scrFindPathWander();
+      path_start(path, mobSpeed, path_action_stop, false);
+      /*
+            if rand < 25 // vertical wander
       {
          if rand < 12
          {
@@ -35,6 +38,7 @@ if (timeInRoom mod (room_speed * AI_INTERVAL) = 0)
             mobMoveDirection = LEFT;
             show_debug_message("wander left with mobMoveDirection = "+string(mobMoveDirection));
          }
-      }      
+      } 
+      */     
    }
 }

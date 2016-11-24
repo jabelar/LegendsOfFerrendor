@@ -46,7 +46,7 @@ PATROLLING = 5;
 MOB_DYING = 6;
 
 // Mob AI
-globalvar AI_INTERVAL;
+globalvar AI_INTERVAL, motionPlanningGrid;
 AI_INTERVAL = 2;
 
 globalvar state, MAX_NUM_PLAYERS, numPlayers, willAttack, currentPlayer, clientPlayer;

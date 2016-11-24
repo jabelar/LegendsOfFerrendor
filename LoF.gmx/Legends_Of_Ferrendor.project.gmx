@@ -101,8 +101,6 @@
     <script>scripts\scrChangeMusic.gml</script>
     <script>scripts\scrDecorationFade.gml</script>
     <scripts name="mobs">
-      <script>scripts\scrMobAI.gml</script>
-      <script>scripts\scrMobAISmooth.gml</script>
       <script>scripts\scrMobMovement.gml</script>
       <script>scripts\scrMobMovementSmooth.gml</script>
       <scripts name="mobStates">
@@ -122,9 +120,15 @@
         <script>scripts\scrCommonMobCreate.gml</script>
       </scripts>
       <script>scripts\scrUpdateMobSprite.gml</script>
+      <scripts name="mob AI">
+        <script>scripts\scrMobAI.gml</script>
+        <script>scripts\scrMobAISmooth.gml</script>
+        <script>scripts\scrFindPathWander.gml</script>
+      </scripts>
     </scripts>
     <script>scripts\scrInitialFogOfWar.gml</script>
     <script>scripts\scrUpdateFogOfWar.gml</script>
+    <script>scripts\scrPopulateMotionPlanningGrid.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>
