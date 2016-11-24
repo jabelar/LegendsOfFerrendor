@@ -32,7 +32,7 @@ if (timeInRoom mod (room_speed * AI_INTERVAL) = 0)
          }
          else
          {
-            mobMOveDirection = LEFT;
+            mobMoveDirection = LEFT;
             show_debug_message("wander left with mobMoveDirection = "+string(mobMoveDirection));
          }
       }      

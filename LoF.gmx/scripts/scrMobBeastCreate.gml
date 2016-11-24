@@ -3,8 +3,8 @@ event_inherited();
 // attributes
 mobHealth = 100;
 mobDamage = 5;
-mobMaxSpeed = TILE_SIZE / 4;
-mobSpeed = 5;
+mobMaxSpeed = TILE_SIZE / 32;
+mobSpeed = mobMaxSpeed / 2;
 
 // sprite array
 spritesMob[UP] = sprBeastUp;

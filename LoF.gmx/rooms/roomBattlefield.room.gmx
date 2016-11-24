@@ -927,6 +927,16 @@
     <tile bgName="background1" x="2304" y="9472" w="256" h="256" xo="0" yo="0" id="10001409" name="inst_A7E4A499" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="background1" x="2048" y="8704" w="256" h="256" xo="0" yo="0" id="10001410" name="inst_20CE1560" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="background1" x="768" y="9472" w="256" h="256" xo="0" yo="0" id="10001411" name="inst_B3B36635" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background0" x="1280" y="8960" w="256" h="256" xo="0" yo="0" id="10001412" name="inst_24D0C391" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background0" x="1536" y="7936" w="256" h="256" xo="0" yo="0" id="10001413" name="inst_9818D414" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background0" x="3840" y="8192" w="256" h="256" xo="0" yo="0" id="10001414" name="inst_B213F0DE" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background0" x="1792" y="7168" w="256" h="256" xo="0" yo="0" id="10001415" name="inst_3D2A6A8E" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background0" x="1024" y="9984" w="256" h="256" xo="0" yo="0" id="10001416" name="inst_842F1E4E" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background0" x="3328" y="9984" w="256" h="256" xo="0" yo="0" id="10001417" name="inst_71FC4890" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background0" x="4352" y="9728" w="256" h="256" xo="0" yo="0" id="10001418" name="inst_39BDFE9D" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background0" x="0" y="9728" w="256" h="256" xo="0" yo="0" id="10001419" name="inst_14CD132A" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background0" x="4864" y="7680" w="256" h="256" xo="0" yo="0" id="10001421" name="inst_05B11296" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background0" x="0" y="6400" w="256" h="256" xo="0" yo="0" id="10001422" name="inst_09628B00" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>

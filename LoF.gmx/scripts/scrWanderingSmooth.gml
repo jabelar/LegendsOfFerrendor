@@ -1,25 +1,61 @@
 show_debug_message("wandering smooth with mobMoveDirection = "+string(mobMoveDirection));
 
+show_debug_message("LEFT = "+string(LEFT));
+
 switch mobMoveDirection
 {
    case LEFT:
    {
-      x -= mobSpeed;
+       show_debug_message("should move left if no obstacle");
+       if (tile_layer_find(LAYER_OBSTACLES, x - mobSpeed, y + TILE_SIZE / 2) == -1)
+       {
+          x -= mobSpeed;
+       }
+       else
+       {
+          show_debug_message("found obstacle");
+          mobState = IDLE;
+          mobMoveDirection = STILL;
+       }
       break;
    }
    case RIGHT:
    {
-      x += mobSpeed;
+       if (tile_layer_find(LAYER_OBSTACLES, x + TILE_SIZE + mobSpeed, y + TILE_SIZE / 2) == -1)
+       {
+          x += mobSpeed;
+       }
+       else
+       {
+          mobState = IDLE;
+          mobMoveDirection = STILL;
+       }
       break;
    }
    case UP:
    {
-      y -= mobSpeed;
+       if (tile_layer_find(LAYER_OBSTACLES, x + TILE_SIZE / 2, y - mobSpeed) == -1)
+       {
+          y -= mobSpeed;
+       }
+       else
+       {
+          mobState = IDLE;
+          mobMoveDirection = STILL;
+       }
       break;
    }
    case DOWN:
    {
-      y += mobSpeed;
+       if (tile_layer_find(LAYER_OBSTACLES, x + TILE_SIZE / 2, y + TILE_SIZE + mobSpeed) == -1)
+       {
+          y += mobSpeed;
+       }
+       else
+       {
+          mobState = IDLE;
+          mobMoveDirection = STILL;
+       }
       break;
    }
 } 
@@ -45,7 +81,7 @@ if y < 0
 }
 if y > room_height - TILE_SIZE
 {
-   x = room_height - TILE_SIZE;
+   y = room_height - TILE_SIZE;
    mobMoveDirection = STILL;
    mobState = IDLE;
 }
