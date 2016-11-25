@@ -50,85 +50,96 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scrMainLoop.gml</script>
-    <script>scripts\scrGameStart.gml</script>
-    <script>scripts\scrRoomStart.gml</script>
-    <script>scripts\scrKeepPlayerInView.gml</script>
-    <script>scripts\scrKeepPlayerInRoomSmooth.gml</script>
-    <script>scripts\scrKeepPlayerInRoom.gml</script>
-    <script>scripts\scrUpdatePlayerDirection.gml</script>
-    <script>scripts\scrProcessTurnTimer.gml</script>
-    <script>scripts\updateStateForAttackInNewDirection.gml</script>
-    <script>scripts\updateStateForAttackInExistingDirection.gml</script>
-    <scripts name="playerStates">
-      <script>scripts\scrMoving.gml</script>
-      <script>scripts\scrMovingSmooth.gml</script>
-      <script>scripts\scrMainMenu.gml</script>
-      <script>scripts\scrWaitInput.gml</script>
-      <script>scripts\scrWaitInputSmooth.gml</script>
-      <script>scripts\scrAttackMelee.gml</script>
-      <script>scripts\scrAttackRanged.gml</script>
-      <script>scripts\scrAttackMagic.gml</script>
-      <script>scripts\scrOpeningCredits.gml</script>
-      <script>scripts\scrDying.gml</script>
-    </scripts>
-    <script>scripts\scrCollisionSmooth.gml</script>
-    <script>scripts\scrCollision.gml</script>
-    <scripts name="attacks">
-      <scripts name="damage">
-        <script>scripts\scrHitEntityRanged.gml</script>
-        <script>scripts\scrHitEntityMagic.gml</script>
-        <script>scripts\scrHitObstacleRanged.gml</script>
-        <script>scripts\scrHitObstacleMagic.gml</script>
-        <script>scripts\scrPlayerDies.gml</script>
-      </scripts>
-      <scripts name="create">
-        <script>scripts\scrRangedCreate.gml</script>
-        <script>scripts\scrMagicCreate.gml</script>
-        <script>scripts\scrMeleeCreate.gml</script>
-      </scripts>
-      <scripts name="step">
-        <script>scripts\scrRangedStep.gml</script>
-        <script>scripts\scrMagicStep.gml</script>
-        <script>scripts\scrMeleeStep.gml</script>
-      </scripts>
+    <scripts name="game">
+      <script>scripts\scrMainLoop.gml</script>
+      <script>scripts\scrGameStart.gml</script>
+      <script>scripts\scrRoomStart.gml</script>
+      <script>scripts\scrProcessTurnTimer.gml</script>
+      <script>scripts\scrChangeMusic.gml</script>
+      <script>scripts\scrPopulateMotionPlanningGrid.gml</script>
     </scripts>
     <scripts name="draw">
       <script>scripts\scrDrawGUI.gml</script>
       <script>scripts\scrDraw.gml</script>
+      <script>scripts\scrDecorationFade.gml</script>
+      <script>scripts\scrInitialFogOfWar.gml</script>
+      <script>scripts\scrUpdateFogOfWar.gml</script>
     </scripts>
-    <script>scripts\scrTestGit.gml</script>
-    <script>scripts\scrChangeMusic.gml</script>
-    <script>scripts\scrDecorationFade.gml</script>
-    <scripts name="mobs">
-      <script>scripts\scrMobMovement.gml</script>
-      <script>scripts\scrMobMovementSmooth.gml</script>
-      <scripts name="mobStates">
-        <script>scripts\scrIdle.gml</script>
-        <script>scripts\scrWandering.gml</script>
-        <script>scripts\scrWanderingSmooth.gml</script>
-        <script>scripts\scrAttackingRanged.gml</script>
-        <script>scripts\scrAttackingMelee.gml</script>
-        <script>scripts\scrFleeing.gml</script>
-        <script>scripts\scrFleeingSmooth.gml</script>
-        <script>scripts\scrPatrolling.gml</script>
-        <script>scripts\scrPatrollingSmooth.gml</script>
-        <script>scripts\scrMobDying.gml</script>
-      </scripts>
-      <scripts name="mobCreate">
-        <script>scripts\scrMobBeastCreate.gml</script>
-        <script>scripts\scrCommonMobCreate.gml</script>
-      </scripts>
-      <script>scripts\scrUpdateMobSprite.gml</script>
-      <scripts name="mob AI">
-        <script>scripts\scrMobAI.gml</script>
-        <script>scripts\scrMobAISmooth.gml</script>
-        <script>scripts\scrFindPathWander.gml</script>
+    <scripts name="entities">
+      <script>scripts\scrEntityCreate.gml</script>
+      <scripts name="entityLiving">
+        <script>scripts\scrEntityLivingCreate.gml</script>
+        <scripts name="player">
+          <scripts name="playerStates">
+            <script>scripts\scrMoving.gml</script>
+            <script>scripts\scrMovingSmooth.gml</script>
+            <script>scripts\scrMainMenu.gml</script>
+            <script>scripts\scrWaitInput.gml</script>
+            <script>scripts\scrWaitInputSmooth.gml</script>
+            <script>scripts\scrAttackMelee.gml</script>
+            <script>scripts\scrAttackRanged.gml</script>
+            <script>scripts\scrAttackMagic.gml</script>
+            <script>scripts\scrOpeningCredits.gml</script>
+            <script>scripts\scrDying.gml</script>
+            <script>scripts\updateStateForAttackInNewDirection.gml</script>
+            <script>scripts\updateStateForAttackInExistingDirection.gml</script>
+          </scripts>
+          <scripts name="attacks">
+            <scripts name="damage">
+              <script>scripts\scrHitEntityRanged.gml</script>
+              <script>scripts\scrHitEntityMagic.gml</script>
+              <script>scripts\scrHitObstacleRanged.gml</script>
+              <script>scripts\scrHitObstacleMagic.gml</script>
+              <script>scripts\scrPlayerDies.gml</script>
+            </scripts>
+            <scripts name="create">
+              <script>scripts\scrRangedCreate.gml</script>
+              <script>scripts\scrMagicCreate.gml</script>
+              <script>scripts\scrMeleeCreate.gml</script>
+            </scripts>
+            <scripts name="step">
+              <script>scripts\scrRangedStep.gml</script>
+              <script>scripts\scrMagicStep.gml</script>
+              <script>scripts\scrMeleeStep.gml</script>
+            </scripts>
+          </scripts>
+          <script>scripts\scrKeepPlayerInView.gml</script>
+          <script>scripts\scrKeepPlayerInRoomSmooth.gml</script>
+          <script>scripts\scrKeepPlayerInRoom.gml</script>
+          <script>scripts\scrUpdatePlayerDirection.gml</script>
+          <script>scripts\scrCollisionSmooth.gml</script>
+          <script>scripts\scrCollision.gml</script>
+        </scripts>
+        <scripts name="mobs">
+          <script>scripts\scrMobCreate.gml</script>
+          <script>scripts\scrMobMovement.gml</script>
+          <script>scripts\scrMobMovementSmooth.gml</script>
+          <script>scripts\scrUpdateMobSprite.gml</script>
+          <scripts name="mobStates">
+            <script>scripts\scrIdle.gml</script>
+            <script>scripts\scrWandering.gml</script>
+            <script>scripts\scrWanderingSmooth.gml</script>
+            <script>scripts\scrAttackingRanged.gml</script>
+            <script>scripts\scrAttackingMelee.gml</script>
+            <script>scripts\scrFleeing.gml</script>
+            <script>scripts\scrFleeingSmooth.gml</script>
+            <script>scripts\scrPatrolling.gml</script>
+            <script>scripts\scrPatrollingSmooth.gml</script>
+            <script>scripts\scrMobDying.gml</script>
+          </scripts>
+          <scripts name="mob AI">
+            <script>scripts\scrMobAI.gml</script>
+            <script>scripts\scrMobAISmooth.gml</script>
+            <script>scripts\scrFindPathWander.gml</script>
+          </scripts>
+          <scripts name="aggressive entities">
+            <scripts name="mobs">
+              <script>scripts\scrMobBeastCreate.gml</script>
+            </scripts>
+          </scripts>
+        </scripts>
       </scripts>
     </scripts>
-    <script>scripts\scrInitialFogOfWar.gml</script>
-    <script>scripts\scrUpdateFogOfWar.gml</script>
-    <script>scripts\scrPopulateMotionPlanningGrid.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>
@@ -138,15 +149,11 @@
     <object>objects\objInteractable</object>
     <objects name="entities">
       <object>objects\objEntity</object>
-      <object>objects\objEntityLiving</object>
       <objects name="livingEntities">
-        <objects name="mobs">
+        <object>objects\objEntityLiving</object>
+        <objects name="aggressive entities">
           <object>objects\objMob</object>
-          <objects name="passiveMobs">
-            <object>objects\objMobPassive</object>
-          </objects>
-          <objects name="aggressiveMobs">
-            <object>objects\objMobAggressive</object>
+          <objects name="mobs">
             <object>objects\objMobBeast</object>
           </objects>
           <objects name="bosses">
@@ -155,6 +162,9 @@
         </objects>
         <objects name="players">
           <object>objects\objPlayer</object>
+        </objects>
+        <objects name="passive entities">
+          <object>objects\objMobPassive</object>
         </objects>
       </objects>
       <objects name="weapons">

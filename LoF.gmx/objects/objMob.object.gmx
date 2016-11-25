@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>scrCommonMobCreate</script>
+            <script>scrMobCreate</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -70,6 +70,7 @@
             <string>show_debug_message("reached end of path");
 
 mobState = IDLE;
+path_clear_points(path);
 </string>
           </argument>
         </arguments>
