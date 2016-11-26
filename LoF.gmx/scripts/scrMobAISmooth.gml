@@ -16,16 +16,22 @@ if (timeInRoom mod (room_speed * AI_INTERVAL) = 0)
              show_debug_message("see player");
              if scrInstanceOf(objMob)
              {
+                 show_debug_message("aggressive so starting attack");
                  mobState = ATTACKING_MELEE;
                  mobSpeed = mobMaxSpeed;
-                 attackTarget = playerInstance[currentPlayer];
+                 attackTarget = playerInstance[clientPlayer];
                  scrFindPathToObject(attackTarget);
                  path_start(path, mobSpeed, path_action_stop, false); 
              }    
-             else scrInstanceOf(objEntityPassive)
+             else if scrInstanceOf(objEntityPassive)
              {
+                show_debug_message("passive so starting to flee");
                 mobState = FLEEING;
                 mobSpeed = mobMaxSpeed;
+             }
+             else
+             {
+                show_debug_message("WARNING - not aggressive or passive");
              }
           }
           else
