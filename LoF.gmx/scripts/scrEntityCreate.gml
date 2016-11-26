@@ -5,6 +5,7 @@ mobState = IDLE;
 mobMoveDirection = STILL;
 mobMaxSpeed = TILE_SIZE / 32;
 mobSpeed = mobMaxSpeed / 2;
+maxSightDistance = 4;
 
 // sprite array
 spritesMob[UP] = sprite_index;

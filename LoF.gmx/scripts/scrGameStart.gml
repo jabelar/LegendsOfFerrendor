@@ -1,4 +1,4 @@
-// randomiz the random generator seed
+ // randomiz the random generator seed
 randomize();
 
 // initialize the view

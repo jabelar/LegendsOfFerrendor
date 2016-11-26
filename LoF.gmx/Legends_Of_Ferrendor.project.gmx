@@ -57,6 +57,7 @@
       <script>scripts\scrProcessTurnTimer.gml</script>
       <script>scripts\scrChangeMusic.gml</script>
       <script>scripts\scrPopulateMotionPlanningGrid.gml</script>
+      <script>scripts\scrInstanceOf.gml</script>
     </scripts>
     <scripts name="draw">
       <script>scripts\scrDrawGUI.gml</script>
@@ -131,6 +132,8 @@
             <script>scripts\scrMobAI.gml</script>
             <script>scripts\scrMobAISmooth.gml</script>
             <script>scripts\scrFindPathWander.gml</script>
+            <script>scripts\scrCanSeeObject.gml</script>
+            <script>scripts\scrFindPathToObject.gml</script>
           </scripts>
           <scripts name="aggressive entities">
             <scripts name="mobs">
@@ -164,7 +167,7 @@
           <object>objects\objPlayer</object>
         </objects>
         <objects name="passive entities">
-          <object>objects\objMobPassive</object>
+          <object>objects\objEntityPassive</object>
         </objects>
       </objects>
       <objects name="weapons">
