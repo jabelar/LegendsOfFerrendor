@@ -1,7 +1,15 @@
 var targetObj = argument0;
 var foundPath;
 
-foundPath = mp_grid_path(motionPlanningGrid, path, x + TILE_SIZE / 2, y + TILE_SIZE / 2, targetObj.x + TILE_SIZE / 2, targetObj.y + TILE_SIZE / 2, false);  
+// make sure start and end points are aligned to tile grid
+var tileX = (x div TILE_SIZE) * TILE_SIZE + TILE_SIZE / 2;
+var tileY = (y div TILE_SIZE) * TILE_SIZE + TILE_SIZE / 2;
+var endTileX = (targetObj.x div TILE_SIZE) * TILE_SIZE + TILE_SIZE / 2;
+var endTileY = (targetObj.y div TILE_SIZE) * TILE_SIZE + TILE_SIZE / 2;
+
+foundPath = mp_grid_path(motionPlanningGrid, path, tileX, tileY, endTileX, endTileY, false);  
+
+show_debug_message("looking for path to target object");
 
 if foundPath
 {

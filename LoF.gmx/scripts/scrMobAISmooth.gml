@@ -3,7 +3,13 @@ var rand;
 
 // only make decisions occasionally
 if (timeInRoom mod (room_speed * AI_INTERVAL) = 0)
-{
+{        
+   // update sight
+   for (var i = 0; i < numPlayers; i++)
+   {
+      canSeePlayer[i] = scrCanSeeObject(playerInstance[i]);
+   }
+
     show_debug_message("making AI decision with mobState = "+string(mobState));
     // process the mob state
     switch mobState
@@ -14,6 +20,8 @@ if (timeInRoom mod (room_speed * AI_INTERVAL) = 0)
           if canSeePlayer[currentPlayer]
           {
              show_debug_message("see player");
+             
+             // react according to what type of entity you are
              if scrInstanceOf(objMob)
              {
                  show_debug_message("aggressive so starting attack");
@@ -52,14 +60,29 @@ if (timeInRoom mod (room_speed * AI_INTERVAL) = 0)
        }
        case WANDERING:
        {
+          // react to seeing player
           if canSeePlayer[currentPlayer]
           {
              show_debug_message("see player");
-             mobState = ATTACKING_MELEE;
-             mobSpeed = mobMaxSpeed;
-             attackTarget = playerInstance[currentPlayer];
-             path = mp_grid_path(motionPlanningGrid, path, x + TILE_SIZE / 2, y + TILE_SIZE / 2, playerInstance[currentPlayer].x + TILE_SIZE / 2, playerInstance[currentPlayer].y + TILE_SIZE / 2, false);  
-             path_start(path, mobSpeed, path_action_stop, false);     
+             if scrInstanceOf(objMob)
+             {
+                 show_debug_message("aggressive so starting attack");
+                 mobState = ATTACKING_MELEE;
+                 mobSpeed = mobMaxSpeed;
+                 attackTarget = playerInstance[clientPlayer];
+                 scrFindPathToObject(attackTarget);
+                 path_start(path, mobSpeed, path_action_stop, false); 
+             }    
+             else if scrInstanceOf(objEntityPassive)
+             {
+                show_debug_message("passive so starting to flee");
+                mobState = FLEEING;
+                mobSpeed = mobMaxSpeed;
+             }
+             else
+             {
+                show_debug_message("WARNING - not aggressive or passive");
+             }
           }
           break;
        }

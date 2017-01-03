@@ -26,11 +26,6 @@ with objEntity
     // players are already handled as a special case
     if not object_is_ancestor(object_index, objPlayer) and object_index != objPlayer
     {
-        // update sight
-        for (var i = 0; i < numPlayers; i++)
-        {
-          canSeePlayer[i] = scrCanSeeObject(playerInstance[i]);
-        }
     
         switch (state[clientPlayer])
         {
@@ -38,9 +33,9 @@ with objEntity
            case MOVING_SMOOTH: scrMobAISmooth(); scrMobMovementSmooth(); break;
            case WAIT_INPUT: scrMobAI(); scrMobMovement(); break;
            case MOVING: scrMobMovement(); break;
-           case ATTACK_MELEE: scrMobMovement(); break;
-           case ATTACK_RANGED: scrMobMovement(); break;
-           case ATTACK_MAGIC: scrMobMovement(); break;
+           case ATTACK_MELEE: scrMobAISmooth(); scrMobMovement(); break;
+           case ATTACK_RANGED: scrMobAISmooth(); scrMobMovement(); break;
+           case ATTACK_MAGIC: scrMobAISmooth(); scrMobMovement(); break;
         }
     }
 }
