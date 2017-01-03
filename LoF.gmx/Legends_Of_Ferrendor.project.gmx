@@ -68,8 +68,10 @@
     </scripts>
     <scripts name="entities">
       <script>scripts\scrEntityCreate.gml</script>
+      <script>scripts\scrEnittyEndOfPath.gml</script>
       <scripts name="entityLiving">
         <script>scripts\scrEntityLivingCreate.gml</script>
+        <script>scripts\scrEntityLivingEndOfPath.gml</script>
         <scripts name="player">
           <scripts name="playerStates">
             <script>scripts\scrMoving.gml</script>
@@ -113,6 +115,7 @@
         </scripts>
         <scripts name="mobs">
           <script>scripts\scrMobCreate.gml</script>
+          <script>scripts\scrMobEndOfPath.gml</script>
           <script>scripts\scrMobMovement.gml</script>
           <script>scripts\scrMobMovementSmooth.gml</script>
           <script>scripts\scrUpdateMobSprite.gml</script>

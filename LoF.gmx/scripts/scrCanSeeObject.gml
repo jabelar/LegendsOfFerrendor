@@ -21,7 +21,7 @@ if distTiles <= maxSightDistance
            {
                for (var j = 0; j < distY; j += distY / distTiles)
                {
-                   if (tile_layer_find(LAYER_OBSTACLES, startX + i, startY + j) == -1)
+                   if (tile_layer_find(LAYER_OBSTACLES, startX + i, startY + j) != -1)
                    {
                       show_debug_message("Obstacle in line of sight at "+string(startX+i)+", "+string(startY+j));
                       canSeeObj = false;
@@ -33,7 +33,7 @@ if distTiles <= maxSightDistance
            {
                for (var j = 0; j < distY; j += distY / distTiles)
                {
-                   if (tile_layer_find(LAYER_OBSTACLES, startX + i, startY - j) == -1)
+                   if (tile_layer_find(LAYER_OBSTACLES, startX + i, startY - j) != -1)
                    {
                       show_debug_message("Obstacle in line of sight at "+string(startX+i)+", "+string(startY-j));
                       canSeeObj = false;
@@ -53,7 +53,7 @@ if distTiles <= maxSightDistance
                {
                    for (var j = 0; j < distY; j += distY / distTiles)
                    {
-                       if (tile_layer_find(LAYER_OBSTACLES, startX - i, startY + j) == -1)
+                       if (tile_layer_find(LAYER_OBSTACLES, startX - i, startY + j) != -1)
                        {
                           show_debug_message("Obstacle in line of sight at "+string(startX-i)+", "+string(startY+j));
                           canSeeObj = false;
@@ -65,7 +65,7 @@ if distTiles <= maxSightDistance
                {
                    for (var j = 0; j < distY; j += distY / distTiles)
                    {
-                       if (tile_layer_find(LAYER_OBSTACLES, startX - i, startY - j) == -1)
+                       if (tile_layer_find(LAYER_OBSTACLES, startX - i, startY - j) != -1)
                        {
                           show_debug_message("Obstacle in line of sight at "+string(startX-i)+", "+string(startY-j));
                           canSeeObj = false;

@@ -20,8 +20,23 @@ timeInRoom += 1;
     } 
 // }
 
-// process mobs
+// TO-DO need to process common entity stuff
 with objEntity
+{
+}
+
+// TO-DO need to process common living entity stuff
+with objEntityLiving
+{
+}
+
+// TO-Do need to process common passive entity stuff
+with objEntityPassive
+{
+}
+
+// process mobs
+with objMob
 {
     // players are already handled as a special case
     if not object_is_ancestor(object_index, objPlayer) and object_index != objPlayer
@@ -29,13 +44,14 @@ with objEntity
     
         switch (state[clientPlayer])
         {
+           // note these are the player states, not the mob's states
            case WAIT_INPUT_SMOOTH: scrMobAISmooth(); scrMobMovementSmooth(); break;
            case MOVING_SMOOTH: scrMobAISmooth(); scrMobMovementSmooth(); break;
            case WAIT_INPUT: scrMobAI(); scrMobMovement(); break;
            case MOVING: scrMobMovement(); break;
-           case ATTACK_MELEE: scrMobAISmooth(); scrMobMovement(); break;
-           case ATTACK_RANGED: scrMobAISmooth(); scrMobMovement(); break;
-           case ATTACK_MAGIC: scrMobAISmooth(); scrMobMovement(); break;
+           case ATTACK_MELEE: scrMobAI(); scrMobMovement(); break;
+           case ATTACK_RANGED: scrMobAI(); scrMobMovement(); break;
+           case ATTACK_MAGIC: scrMobAI(); scrMobMovement(); break;
         }
     }
 }

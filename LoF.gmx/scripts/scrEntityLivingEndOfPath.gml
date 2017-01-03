@@ -1,0 +1,2 @@
+/// scrEntityLivingEndOfPath()
+event_inherited();
