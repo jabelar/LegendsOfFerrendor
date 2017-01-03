@@ -6,6 +6,7 @@ while (not foundPath)
 {
    i = irandom(8);
    j = irandom(8);
+   path_clear_points(path);
    foundPath = mp_grid_path(motionPlanningGrid, path, x + TILE_SIZE / 2, y + TILE_SIZE / 2, x + TILE_SIZE / 2 + (i - 4) * TILE_SIZE, y + TILE_SIZE / 2 + (j - 4) * TILE_SIZE, false);  
 }
 

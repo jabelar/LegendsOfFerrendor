@@ -69,17 +69,27 @@ if (timeInRoom mod (room_speed * AI_INTERVAL) = 0)
                  show_debug_message("aggressive so starting attack");
                  mobState = ATTACKING_MELEE;
                  mobSpeed = mobMaxSpeed;
-                 attackTarget = playerInstance[clientPlayer];
-                 scrFindPathToObject(attackTarget);
-                 path_start(path, mobSpeed, path_action_stop, false); 
+                 if scrFindPathToObject(attackTarget)
+                 {
+                    path_start(path, mobSpeed, path_action_stop, false);
+                 }
+                 else
+                 {
+                    path_clear_points(path);
+                    path_end();
+                    mobState = IDLE;
+                    mobSpeed = 0;
+                    attackTarget = -1; 
+                 }            
              }    
              else if scrInstanceOf(objEntityPassive)
              {
                 show_debug_message("passive so starting to flee");
                 mobState = FLEEING;
                 mobSpeed = mobMaxSpeed;
-                 attackTarget = null;
-                 path_end();
+                attackTarget = -1;
+                path_clear_points(path);
+                path_end();
              }
              else
              {
@@ -97,14 +107,21 @@ if (timeInRoom mod (room_speed * AI_INTERVAL) = 0)
        {
           show_debug_message("attacking melee");
           
-          // react to losing sight of the player
-          if not canSeePlayer[currentPlayer]
+          // adjust path to target object
+          if canSeePlayer[currentPlayer]
           {
-             show_debug_message("can no longer see player");
-             mobState = IDLE;
-             mobSpeed = 0;
-             attackTarget = null;
-             path_end();
+             if scrFindPathToObject(attackTarget)
+             {
+                path_start(path, mobSpeed, path_action_stop, false);
+             }
+             else
+             {
+                path_clear_points(path);
+                path_end();
+                mobState = IDLE;
+                mobSpeed = 0;
+                attackTarget = -1; 
+             }
           }
  
           break;
