@@ -5,6 +5,7 @@ if (currentPlayer == 0)
     // if direction key pressed check if attack key already pressed
     if (keyboard_check(KEY_LEFT))  
     {
+        turnTimer = 0; // turn ends when player takes action
         if (keyboard_check(KEY_MELEE))
         {
             moveDirection[currentPlayer] = MELEE_LEFT;
@@ -35,6 +36,7 @@ if (currentPlayer == 0)
     }
     else if (keyboard_check(KEY_RIGHT)) 
     {
+        turnTimer = 0; // turn ends when player takes action
         if (keyboard_check(KEY_MELEE))
         {
             moveDirection[currentPlayer] = MELEE_RIGHT;
@@ -65,6 +67,7 @@ if (currentPlayer == 0)
     }
     else if (keyboard_check(KEY_UP)) 
     {
+        turnTimer = 0; // turn ends when player takes action
         if (keyboard_check(KEY_MELEE))
         {
             moveDirection[currentPlayer] = MELEE_UP;
@@ -95,6 +98,7 @@ if (currentPlayer == 0)
     }
     else if (keyboard_check(KEY_DOWN)) 
     {
+        turnTimer = 0; // turn ends when player takes action
         if (keyboard_check(KEY_MELEE))
         {
             moveDirection[currentPlayer] = MELEE_DOWN;
@@ -129,16 +133,19 @@ if (currentPlayer == 0)
         {
             lastAttackKey[currentPlayer] = KEY_MELEE;
             willAttack[currentPlayer] = true;
+            turnTimer = 0; // turn ends when player takes action
         }
         else if keyboard_check_pressed(KEY_RANGED)
         {
             lastAttackKey[currentPlayer] = KEY_RANGED;
             willAttack[currentPlayer] = true;
+            turnTimer = 0; // turn ends when player takes action
         }
         else if keyboard_check_pressed(KEY_MAGIC)
         {
             lastAttackKey[currentPlayer] = KEY_MAGIC;
             willAttack[currentPlayer] = true;
+            turnTimer = 0; // turn ends when player takes action
         }
     }
 

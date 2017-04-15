@@ -204,9 +204,9 @@
     <option_androidtv_use_test_ads>false</option_androidtv_use_test_ads>
     <option_argumenterrors>True</option_argumenterrors>
     <option_audioGroupCount>1</option_audioGroupCount>
-    <option_author></option_author>
+    <option_author>jabelar</option_author>
     <option_backimage>nil</option_backimage>
-    <option_borderless>False</option_borderless>
+    <option_borderless>True</option_borderless>
     <option_changed>false</option_changed>
     <option_changeresolution>false</option_changeresolution>
     <option_closeesc>true</option_closeesc>
@@ -220,7 +220,7 @@
     <option_freeze>false</option_freeze>
     <option_frequency>0</option_frequency>
     <option_frontimage>nil</option_frontimage>
-    <option_fullscreen>False</option_fullscreen>
+    <option_fullscreen>True</option_fullscreen>
     <option_gameguid>{B8B2B277-F383-46DA-BE5E-08C37B615145}</option_gameguid>
     <option_gameid>576632991</option_gameid>
     <option_haptic_effects>0</option_haptic_effects>
@@ -488,7 +488,7 @@
     <option_win8_build_version>0</option_win8_build_version>
     <option_win8_certificate_location>Windows8_TemporaryKey.pfx</option_win8_certificate_location>
     <option_win8_display_name>Legends_Of_Ferrendor</option_win8_display_name>
-    <option_win8_internet_capable>0</option_win8_internet_capable>
+    <option_win8_internet_capable>-1</option_win8_internet_capable>
     <option_win8_interpolate>-1</option_win8_interpolate>
     <option_win8_landscape_allowed>-1</option_win8_landscape_allowed>
     <option_win8_landscape_flipped_allowed>-1</option_win8_landscape_flipped_allowed>

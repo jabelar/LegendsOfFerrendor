@@ -15,7 +15,7 @@ switch (room)
    }
    case roomBattlefield:
    {
-      state[clientPlayer] = WAIT_INPUT_SMOOTH;
+      state[clientPlayer] = WAIT_INPUT;
       timeInRoom = -1;
       scrChangeMusic(sndBattlefieldWander);
       
