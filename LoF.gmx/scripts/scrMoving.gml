@@ -4,7 +4,7 @@ if moveDirection[currentPlayer] == STILL
 }
 else
 {
-    playerInstance[currentPlayer].image_speed = 0.25;
+    playerInstance[currentPlayer].image_speed = 0.6;
 }
 
 scrUpdatePlayerDirection();
